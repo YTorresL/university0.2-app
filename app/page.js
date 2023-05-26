@@ -1,14 +1,14 @@
 "use client"
 import Image from "next/image"
-import Button from "@/Components/Button/page"
+import Button from "@/components/Button/page"
 import Link from "next/link"
-import { Cloud } from "@/Components/Icons/page"
-import Line from "@/Components/Line/page"
+import { Cloud } from "@/components/Icons/page"
+import Line from "@/components/Line/page"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Parrafo from "@/Components/Paragraph/page"
-import Titulo from "@/Components/Title/page"
+import Parrafo from "@/components/Paragraph/page"
+import Titulo from "@/components/Title/page"
 
 const navigation = [
   { name: "Inicio", href: "/" },
