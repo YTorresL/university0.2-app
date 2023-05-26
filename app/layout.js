@@ -1,4 +1,5 @@
 import "./globals.css"
+import "normalize.css/normalize.css"
 
 export const metadata = {
   title: "Create Next App",
