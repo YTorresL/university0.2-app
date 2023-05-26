@@ -169,19 +169,6 @@ export default function Home() {
                   un equipo comprometido, te ofrecemos la puerta de entrada a
                   las mejores universidades en Rusia.
                 </p>
-                <form className=" mt-6 hidden">
-                  <input
-                    type="search"
-                    placeholder="Buscar"
-                    className="py-3 px-3 rounded-l-lg focus:outline-none focus:border-blue-600 border-2 border-white md:w-1/2 w-[57%]"
-                  />
-                  <button
-                    type="submit"
-                    className="py-3 px-4 rounded-r-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-none tracking-wider"
-                  >
-                    Buscar
-                  </button>
-                </form>
               </div>
             </div>
           </div>
@@ -207,7 +194,7 @@ export default function Home() {
         <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-              <div className="md:w-1/2 z-10">
+              <div className="md:w-1/2">
                 <Titulo>Servicios de EDURU</Titulo>
                 <Line />
 
@@ -247,7 +234,7 @@ export default function Home() {
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col md:flex-row items-center justify-center">
-              <div className="z-20">
+              <div>
                 <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:mr-20">
                   <Image
                     src="/meet.jpg"
@@ -258,12 +245,12 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="md:w-1/2 z-10">
+              <div className="md:w-1/2 w-full">
                 <Titulo>Testimonios reales</Titulo>
                 <Line />
                 <Slider {...settings}>
                   {testimonios.map((item, index) => (
-                    <div key={index}>
+                    <div key={index} className="mb-10">
                       <div className="flex items-center my-5">
                         <div>
                           <div className="rounded-full w-20 h-20 overflow-hidden">
@@ -378,7 +365,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="md:w-1/2 z-10">
+              <div className="md:w-1/2">
                 <Titulo>Proceso de asesoramiento</Titulo>
                 <Line />
 
@@ -387,7 +374,7 @@ export default function Home() {
                   cada paso del proceso de admisión. ¡Cumple tus sueños
                   académicos con nosotros!
                 </Parrafo>
-                <ul className="mt-2">
+                <ul className="mt-5">
                   {proceso.map((item, index) => (
                     <li
                       className="my-3 text-gray-500 leading-6 tracking-wider flex"
@@ -399,7 +386,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="flex flex-col">
-                        <h1 className="my-0 font-bold text-gray-800 md:text-lg text-base leading-5">
+                        <h1 className="my-0 font-bold text-gray-800 text-lg leading-5">
                           {item.title}
                         </h1>
                         <Parrafo>{item.description}</Parrafo>
@@ -414,7 +401,7 @@ export default function Home() {
         <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-              <div className="md:w-1/2 z-10">
+              <div className="md:w-1/2">
                 <Titulo>Costos y financiamiento</Titulo>
                 <Line />
                 <Parrafo>
@@ -458,7 +445,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="md:w-1/2 z-10">
+              <div className="md:w-1/2">
                 <Titulo>Contacto</Titulo>
                 <Line />
                 <div className="flex items-center my-5">
@@ -493,9 +480,9 @@ export default function Home() {
         </div>
       </main>
 
-      <footer class="bg-white dark:bg-gray-900">
-        <div class="mx-auto w-[85%] p-4 py-6 lg:py-20">
-          <div class="grid grid-cols-2 gap-3 sm:gap-8 sm:grid-cols-5 w-full place-content-center">
+      <footer className="bg-white">
+        <div className="mx-auto w-[85%] p-4 py-6 lg:py-20">
+          <div className="grid grid-cols-2 gap-3 sm:gap-8 sm:grid-cols-5 w-full place-content-center">
             <div>
               <Image
                 src="/logo.png"
@@ -504,50 +491,54 @@ export default function Home() {
                 height={50}
                 className="md:w-16 w-12 mb-4"
               />
-              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                 © 2023 Marca™. All Rights Reserved.
               </span>
             </div>
             <div>
-              <h2 class="mb-6 text-lg font-bold text-gray-800">Resources</h2>
-              <ul class="text-base text-gray-500 dark:text-gray-400 font-semibold">
-                <li class="mb-4">
-                  <Link href="/" class="hover:underline">
+              <h2 className="mb-6 text-lg font-bold text-gray-800">
+                Resources
+              </h2>
+              <ul className="text-base text-gray-500 dark:text-gray-400 font-semibold">
+                <li className="mb-4">
+                  <Link href="/" className="hover:underline">
                     Blog empresas
                   </Link>
                 </li>
-                <li class="mb-4">
-                  <Link href="/" class="hover:underline">
+                <li className="mb-4">
+                  <Link href="/" className="hover:underline">
                     Seguridad
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-lg font-bold text-gray-800">Follow us</h2>
-              <ul class="text-base text-gray-500 dark:text-gray-400 font-semibold">
-                <li class="mb-4">
-                  <Link href="/" class="hover:underline">
+              <h2 className="mb-6 text-lg font-bold text-gray-800">
+                Follow us
+              </h2>
+              <ul className="text-base text-gray-500 dark:text-gray-400 font-semibold">
+                <li className="mb-4">
+                  <Link href="/" className="hover:underline">
                     Trabaja con nosotros
                   </Link>
                 </li>
-                <li class="mb-4">
-                  <Link href="/" class="hover:underline">
+                <li className="mb-4">
+                  <Link href="/" className="hover:underline">
                     Seguridad
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-lg font-bold text-gray-800">Legal</h2>
-              <ul class="text-base text-gray-500 dark:text-gray-400 font-semibold">
-                <li class="mb-4">
-                  <Link href="/" class="hover:underline">
+              <h2 className="mb-6 text-lg font-bold text-gray-800">Legal</h2>
+              <ul className="text-base text-gray-500 dark:text-gray-400 font-semibold">
+                <li className="mb-4">
+                  <Link href="/" className="hover:underline">
                     Seguridad
                   </Link>
                 </li>
-                <li class="mb-4">
-                  <Link href="/" class="hover:underline">
+                <li className="mb-4">
+                  <Link href="/" className="hover:underline">
                     Trabaja con nosotros
                   </Link>
                 </li>
