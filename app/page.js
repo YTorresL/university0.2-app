@@ -10,14 +10,14 @@ import "slick-carousel/slick/slick-theme.css"
 import Parrafo from "@/components/Paragraph/page"
 import Titulo from "@/components/Title/page"
 import Calendly from "@/components/Calendly/page"
+import ImageWidth from "@/components/ImageWidth/page"
 
 const navigation = [
   { name: "Inicio", href: "/" },
-  { name: "Universidades", href: "/universidades" },
-  { name: "Carreras", href: "/carreras" },
-  { name: "Precios", href: "/precios" },
-  { name: "Servicios", href: "/servicios" },
-  { name: "Contacto", href: "/contacto" },
+  { name: "Servicios", href: "#servicios" },
+  { name: "Testimonios", href: "#testimonios" },
+  { name: "Universidades", href: "#universidades" },
+  { name: "Agenda tu cita", href: "#agenda" },
 ]
 
 const beneficios = [
@@ -114,12 +114,37 @@ const proceso = [
   },
 ]
 
+const preguntas = [
+  {
+    title: "System Requirements",
+    description:
+      "Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.",
+  },
+  {
+    title: "Inicia tu carrera",
+    description:
+      "Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.",
+  },
+]
+
 export default function Home() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 3000,
     slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    variableWidth: false,
+    vertical: false,
+  }
+
+  const settings3 = {
+    dots: true,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -195,70 +220,14 @@ export default function Home() {
         <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-              <div className="md:w-1/2">
-                <Titulo>Problematica</Titulo>
-                <Line />
-                <Parrafo>
-                  En EDURU, nos apasiona brindar igualdad de oportunidades a
-                  estudiantes latinoamericanos que buscan una educación de
-                  calidad a nivel mundial. Con nuestra asesoría especializada y
-                  un equipo comprometido, te ofrecemos la puerta de entrada a
-                  las mejores universidades en Rusia.
-                </Parrafo>
-              </div>
-              <div className="z-20">
-                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:ml-20">
-                  <Image
-                    src="/meet.jpg"
-                    alt="map"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col md:flex-row items-center justify-center">
-              <div className="z-20">
-                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:mr-20">
-                  <Image
-                    src="/meet.jpg"
-                    alt="map"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <Titulo>Solución</Titulo>
-                <Line />
-                <Parrafo>
-                  En EDURU, nos apasiona brindar igualdad de oportunidades a
-                  estudiantes latinoamericanos que buscan una educación de
-                  calidad a nivel mundial. Con nuestra asesoría especializada y
-                  un equipo comprometido, te ofrecemos la puerta de entrada a
-                  las mejores universidades en Rusia.
-                </Parrafo>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-[#ECF0FB]">
-          <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 md:mr-20">
                 <Titulo>Servicios de EDURU</Titulo>
                 <Line />
 
                 <ul>
                   {servicios.map((item, index) => (
                     <li
-                      className="my-3 text-gray-500 leadingy-6 tracking-wider flex"
+                      className="my-3 text-gray-500 leadingy-6 flex"
                       key={index}
                     >
                       <div className="w-8 h-8 mr-4">
@@ -274,35 +243,15 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <div className="z-20">
-                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:ml-20">
-                  <Image
-                    src="/meet.jpg"
-                    alt="map"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+              <ImageWidth src="/meet.jpg" alt="nose" />
             </div>
           </div>
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col md:flex-row items-center justify-center">
-              <div>
-                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:mr-20">
-                  <Image
-                    src="/meet.jpg"
-                    alt="map"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2 w-full">
+              <ImageWidth src="/meet.jpg" alt="nose" />
+              <div className="md:w-1/2 w-full md:ml-20">
                 <Titulo>Testimonios reales</Titulo>
                 <Line />
                 <Slider {...settings}>
@@ -340,60 +289,18 @@ export default function Home() {
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Universidades y programas</Titulo>
             <Line />
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-10 mt-8">
-              <div className="rounded-lg overflow-hidden bg-white">
-                <div>
-                  <div className="h-64 w-full">
-                    <Image
-                      src="/meet.jpg"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="m-5">
-                    <p className="text-gray-400 text-sm">Abril 22, 2023</p>
-                    <h3 className="text-base font-bold text-gray-800 leading-5 my-1">
-                      Estudiar en Rusia con nuestro plan de movilidad académica
-                    </h3>
-                    <Link href="#" className="uppercase text-blue-600 text-xs">
-                      Leer mas...
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden bg-white">
-                <div>
-                  <div className="h-64 w-full">
-                    <Image
-                      src="/meet.jpg"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="m-5">
-                    <p className="text-gray-400 text-sm">Abril 22, 2023</p>
-                    <h3 className="text-base font-bold text-gray-800 leading-5 my-1">
-                      Estudiar en Rusia con nuestro plan de movilidad académica
-                    </h3>
-                    <Link href="#" className="uppercase text-blue-600 text-xs">
-                      Leer mas...
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden bg-white">
-                <div>
-                  <div className="h-64 w-full">
-                    <Image
-                      src="/meet.jpg"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
 
+            <Slider {...settings3}>
+              <div className="rounded-lg overflow-hidden bg-white">
+                <div>
+                  <div className="h-64 w-full">
+                    <Image
+                      src="/meet.jpg"
+                      width={1000}
+                      height={1000}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="m-5">
                     <p className="text-gray-400 text-sm">Abril 22, 2023</p>
                     <h3 className="text-base font-bold text-gray-800 leading-5 my-1">
@@ -405,24 +312,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Slider>
           </div>
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col md:flex-row items-center justify-center">
-              <div className="z-20">
-                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:mr-20">
-                  <Image
-                    src="/meet.jpg"
-                    alt="map"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2">
+              <ImageWidth src="/meet.jpg" alt="nose" />
+              <div className="md:w-1/2 md:ml-20">
                 <Titulo>Proceso de asesoramiento</Titulo>
                 <Line />
 
@@ -431,19 +328,16 @@ export default function Home() {
                   cada paso del proceso de admisión. ¡Cumple tus sueños
                   académicos con nosotros!
                 </Parrafo>
-                <ul className="mt-5">
+                <ul className="mt-8">
                   {proceso.map((item, index) => (
-                    <li
-                      className="my-3 text-gray-500 leading-6 tracking-wider flex"
-                      key={index}
-                    >
+                    <li className="my-3 flex leading-6" key={index}>
                       <div>
                         <div className="rounded-full bg-blue-500 text-white font-bold py-2 px-4 mr-5">
                           {index + 1}
                         </div>
                       </div>
                       <div className="flex flex-col">
-                        <h1 className="my-0 font-bold text-gray-800 text-lg leading-5">
+                        <h1 className="my-0 font-bold text-gray-800 text-lg">
                           {item.title}
                         </h1>
                         <Parrafo>{item.description}</Parrafo>
@@ -458,42 +352,32 @@ export default function Home() {
         <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 md:mr-20">
                 <Titulo>Agenda tu cita</Titulo>
                 <Line />
                 <Calendly />
               </div>
-              <div className="z-20">
-                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:ml-20">
-                  <Image
-                    src="/meet.jpg"
-                    alt="map"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+              <ImageWidth src="/meet.jpg" alt="nose" />
             </div>
           </div>
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col md:flex-row items-center justify-center">
-              <div className="z-20">
-                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:mr-20">
-                  <Image
-                    src="/meet.jpg"
-                    alt="map"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2">
+              <ImageWidth src="/meet.jpg" alt="nose" />
+              <div className="md:w-1/2 md:ml-20">
                 <Titulo>Preguntas y respuestas</Titulo>
                 <Line />
+                {preguntas.map((item, index) => (
+                  <details className="mb-1" key={index}>
+                    <summary className="border border-blue-500 rounded-lg py-2 px-4 list-none text-gray-800 text-lg leading-5">
+                      {item.title}
+                    </summary>
+                    <div className="my-3">
+                      <Parrafo>{item.description}</Parrafo>
+                    </div>
+                  </details>
+                ))}
               </div>
             </div>
           </div>
@@ -519,7 +403,7 @@ export default function Home() {
               <h2 className="mb-6 text-lg font-bold text-gray-800">
                 Resources
               </h2>
-              <ul className="text-base text-gray-500 dark:text-gray-400 font-semibold">
+              <ul className="text-base text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
                   <Link href="/" className="hover:underline">
                     Blog empresas
@@ -536,7 +420,7 @@ export default function Home() {
               <h2 className="mb-6 text-lg font-bold text-gray-800">
                 Follow us
               </h2>
-              <ul className="text-base text-gray-500 dark:text-gray-400 font-semibold">
+              <ul className="text-base text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
                   <Link href="/" className="hover:underline">
                     Trabaja con nosotros
@@ -551,7 +435,7 @@ export default function Home() {
             </div>
             <div>
               <h2 className="mb-6 text-lg font-bold text-gray-800">Legal</h2>
-              <ul className="text-base text-gray-500 dark:text-gray-400 font-semibold">
+              <ul className="text-base text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
                   <Link href="/" className="hover:underline">
                     Seguridad
