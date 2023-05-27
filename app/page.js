@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Parrafo from "@/components/Paragraph/page"
 import Titulo from "@/components/Title/page"
+import Calendly from "@/components/Calendly/page"
 
 const navigation = [
   { name: "Inicio", href: "/" },
@@ -189,6 +190,62 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="bg-[#ECF0FB]">
+          <div className="w-[85%] mx-auto py-16">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-center">
+              <div className="md:w-1/2">
+                <Titulo>Problematica</Titulo>
+                <Line />
+                <Parrafo>
+                  En EDURU, nos apasiona brindar igualdad de oportunidades a
+                  estudiantes latinoamericanos que buscan una educación de
+                  calidad a nivel mundial. Con nuestra asesoría especializada y
+                  un equipo comprometido, te ofrecemos la puerta de entrada a
+                  las mejores universidades en Rusia.
+                </Parrafo>
+              </div>
+              <div className="z-20">
+                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:ml-20">
+                  <Image
+                    src="/meet.jpg"
+                    alt="map"
+                    width={1000}
+                    height={1000}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="w-[85%] mx-auto py-16">
+            <div className="flex flex-col md:flex-row items-center justify-center">
+              <div className="z-20">
+                <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:mr-20">
+                  <Image
+                    src="/meet.jpg"
+                    alt="map"
+                    width={1000}
+                    height={1000}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <Titulo>Solución</Titulo>
+                <Line />
+                <Parrafo>
+                  En EDURU, nos apasiona brindar igualdad de oportunidades a
+                  estudiantes latinoamericanos que buscan una educación de
+                  calidad a nivel mundial. Con nuestra asesoría especializada y
+                  un equipo comprometido, te ofrecemos la puerta de entrada a
+                  las mejores universidades en Rusia.
+                </Parrafo>
+              </div>
+            </div>
           </div>
         </div>
         <div className="bg-[#ECF0FB]">
@@ -402,20 +459,9 @@ export default function Home() {
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse md:flex-row items-center justify-center">
               <div className="md:w-1/2">
-                <Titulo>Costos y financiamiento</Titulo>
+                <Titulo>Agenda tu cita</Titulo>
                 <Line />
-                <Parrafo>
-                  Somos una empresa de asesoría educativa constituida
-                  legalmente, que brinda el servicio para el ingreso legal a la
-                  educación en la Federación Rusa, basados en la gestión,
-                  coordinación, organización y asistencia personalizada durante
-                  el proceso de tramitación de documentos.
-                </Parrafo>
-                <Button
-                  title="Ver más"
-                  styles="bg-blue-600 hover:bg-blue-700 text-white mt-5"
-                  link="/"
-                />
+                <Calendly />
               </div>
               <div className="z-20">
                 <div className="md:w-96 md:h-[27rem] w-60 h-60 rounded-lg overflow-hidden md:ml-20">
@@ -446,34 +492,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="md:w-1/2">
-                <Titulo>Contacto</Titulo>
+                <Titulo>Preguntas y respuestas</Titulo>
                 <Line />
-                <div className="flex items-center my-5">
-                  <div>
-                    <div className="rounded-full w-20 h-20 overflow-hidden">
-                      <Image
-                        src="/profile.jpg"
-                        width={500}
-                        height={500}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="ml-4 grid grid-cols-1 gap-1">
-                    <h1 className="my-0 font-bold text-gray-800 md:text-2xl text-base leading-5">
-                      Alejandra Gabaldón
-                    </h1>
-                    <p className="text-gray-500 text-sm leading-4">
-                      Relaciones internacionales
-                    </p>
-                  </div>
-                </div>
-                <Parrafo>
-                  Fue una experiencia increíble, me encantó la ciudad, la
-                  universidad, la gente, la cultura, todo. Estoy muy agradecida
-                  con EDURU por ayudarme a cumplir mi sueño de estudiar en
-                  Rusia.
-                </Parrafo>
               </div>
             </div>
           </div>
