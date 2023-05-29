@@ -2,7 +2,15 @@
 import Image from "next/image"
 import Button from "@/components/Button/page"
 import Link from "next/link"
-import { Cloud } from "@/components/Icons/page"
+import {
+  Advisor,
+  Community,
+  Custom,
+  Money,
+  Phone,
+  Trust,
+  University,
+} from "@/components/Icons/page"
 import Line from "@/components/Line/page"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
@@ -12,43 +20,57 @@ import Titulo from "@/components/Title/page"
 import Calendly from "@/components/Calendly/page"
 import ImageWidth from "@/components/ImageWidth/page"
 
-const navigation = [
-  { name: "Inicio", href: "/" },
-  { name: "Servicios", href: "#servicios" },
-  { name: "Testimonios", href: "#testimonios" },
-  { name: "Universidades", href: "#universidades" },
-  { name: "Agenda tu cita", href: "#agenda" },
-]
-
 const beneficios = [
   {
-    icon: <Cloud width={50} height={50} className="w-10 h-10" fill="#2563EB" />,
+    icon: (
+      <Custom width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+    ),
     title: "Experiencia personalizada",
     description: "Asesores con amplio conocimiento del sistema educativo ruso.",
   },
   {
-    icon: <Cloud width={50} height={50} className="w-10 h-10" fill="#2563EB" />,
+    icon: (
+      <University
+        width={100}
+        height={100}
+        className="w-10 h-10"
+        fill="#2563EB"
+      />
+    ),
     title: "Universidades de prestigio",
     description: "Acceso a instituciones de renombre y alta calidad académica.",
   },
   {
-    icon: <Cloud width={50} height={50} className="w-10 h-10" fill="#2563EB" />,
+    icon: (
+      <Advisor width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+    ),
     title: "Asesoría integral",
     description: "Apoyo personalizado en cada etapa del proceso educativo.",
   },
   {
-    icon: <Cloud width={50} height={50} className="w-10 h-10" fill="#2563EB" />,
+    icon: (
+      <Money width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+    ),
     title: "Opciones de financiamiento",
     description: "Explora becas y programas de ayuda financiera.",
   },
   {
-    icon: <Cloud width={50} height={50} className="w-10 h-10" fill="#2563EB" />,
+    icon: (
+      <Community
+        width={100}
+        height={100}
+        className="w-10 h-10"
+        fill="#2563EB"
+      />
+    ),
     title: "Comunidad estudiantil",
     description:
       "Conexiones con una red diversa de estudiantes y profesionales.",
   },
   {
-    icon: <Cloud width={50} height={50} className="w-10 h-10" fill="#2563EB" />,
+    icon: (
+      <Trust width={100} height={100} className="w-10 h-10" stroke="#2563EB" />
+    ),
     title: "Confianza garantizada",
     description:
       "Trayectoria comprobada en la realización de sueños académicos.",
@@ -59,20 +81,59 @@ const servicios = [
   {
     title:
       "Asesoramiento especializado en la elección de universidades y programas de estudio.",
+    icon: (
+      <Advisor
+        width={100}
+        height={100}
+        className="w-8 h-8 mr-3"
+        fill="#2563EB"
+      />
+    ),
   },
   {
-    title:
-      "Asesoramiento especializado en la elección de universidades y programas de estudio.",
+    title: "Gestión eficiente de trámites de visas y documentación requerida.",
+    icon: (
+      <Advisor
+        width={100}
+        height={100}
+        className="w-8 h-8 mr-3"
+        fill="#2563EB"
+      />
+    ),
   },
   {
     title: "Búsqueda de becas y programas de financiamiento.",
+    icon: (
+      <Advisor
+        width={100}
+        height={100}
+        className="w-8 h-8 mr-3"
+        fill="#2563EB"
+      />
+    ),
   },
   {
     title: "Apoyo en la búsqueda de alojamiento y adaptación al entorno ruso.",
+    icon: (
+      <Advisor
+        width={100}
+        height={100}
+        className="w-8 h-8 mr-3"
+        fill="#2563EB"
+      />
+    ),
   },
   {
     title:
       "Asistencia integral durante todo el proceso, desde la solicitud hasta la graduación.",
+    icon: (
+      <Advisor
+        width={100}
+        height={100}
+        className="w-8 h-8 mr-3"
+        fill="#2563EB"
+      />
+    ),
   },
 ]
 
@@ -127,6 +188,51 @@ const preguntas = [
   },
 ]
 
+const universidades = [
+  {
+    type: "Universidad",
+    title: "Universidad Estatal de Moscú",
+    description:
+      "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/meet.jpg",
+  },
+  {
+    type: "Universidad",
+    title: "Universidad de San Petersburgo",
+    description:
+      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/meet.jpg",
+  },
+  {
+    type: "Universidad",
+    title: "Universidad de Kaerov",
+    description:
+      "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/meet.jpg",
+  },
+  {
+    type: "Universidad",
+    title: "Universidad Estatal de Moscú",
+    description:
+      "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/meet.jpg",
+  },
+  {
+    type: "Universidad",
+    title: "Universidad de San Petersburgo",
+    description:
+      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/meet.jpg",
+  },
+  {
+    type: "Universidad",
+    title: "Universidad de Kaerov",
+    description:
+      "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/meet.jpg",
+  },
+]
+
 export default function Home() {
   const settings = {
     dots: true,
@@ -148,8 +254,25 @@ export default function Home() {
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 5000,
-    variableWidth: false,
-    vertical: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   }
   return (
     <>
@@ -162,15 +285,18 @@ export default function Home() {
             height={50}
             className="md:w-16 w-12"
           />
-          <ul className="lg:flex items-center hidden">
-            {navigation.map((item) => (
-              <li key={item.name} className="ml-7">
-                <Link href={item.href}>{item.name}</Link>
-              </li>
-            ))}
-          </ul>
           <div className="flex items-center">
-            <span className="hidden min-[375px]:block">+495 95220935</span>
+            <div className="hidden min-[375px]:block">
+              <span className="flex items-center">
+                <Phone
+                  width={100}
+                  height={100}
+                  className="w-7 h-7 mr-2"
+                  fill="#2563EB"
+                />
+                +495 95220935
+              </span>
+            </div>
             <Button
               title="Asesorias"
               styles="bg-blue-600 hover:bg-blue-700 text-white ml-4 md:ml-7"
@@ -230,14 +356,7 @@ export default function Home() {
                       className="my-3 text-gray-500 leadingy-6 flex"
                       key={index}
                     >
-                      <div className="w-8 h-8 mr-4">
-                        <Image
-                          src="/check.png"
-                          width={100}
-                          height={100}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
+                      {item.icon}
                       {item.title}
                     </li>
                   ))}
@@ -291,27 +410,29 @@ export default function Home() {
             <Line />
 
             <Slider {...settings3}>
-              <div className="rounded-lg overflow-hidden bg-white">
-                <div>
-                  <div className="h-64 w-full">
-                    <Image
-                      src="/meet.jpg"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="m-5">
-                    <p className="text-gray-400 text-sm">Abril 22, 2023</p>
-                    <h3 className="text-base font-bold text-gray-800 leading-5 my-1">
-                      Estudiar en Rusia con nuestro plan de movilidad académica
-                    </h3>
-                    <Link href="#" className="uppercase text-blue-600 text-xs">
-                      Leer mas...
-                    </Link>
+              {universidades.map((item, index) => (
+                <div key={index} className="p-2">
+                  <div className="rounded-lg overflow-hidden bg-white">
+                    <div>
+                      <div className="h-64 w-full">
+                        <Image
+                          src={item.imagen}
+                          width={1000}
+                          height={1000}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="m-5">
+                        <p className="text-gray-400 text-sm">{item.type}</p>
+                        <h3 className="text-base font-bold text-gray-800 leading-5 my-1">
+                          {item.title}
+                        </h3>
+                        <Parrafo>{item.description}</Parrafo>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </Slider>
           </div>
         </div>
