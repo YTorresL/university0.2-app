@@ -252,8 +252,6 @@ export default function Home() {
     speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 3,
-    autoplay: true,
-    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1024,
