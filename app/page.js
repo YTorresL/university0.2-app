@@ -281,7 +281,7 @@ export default function Home() {
             alt="logo"
             width={150}
             height={50}
-            className="md:w-16 w-12"
+            className="w-12 md:w-14 lg:w-16"
           />
           <div className="flex items-center">
             <div className="hidden min-[375px]:block">
@@ -289,7 +289,7 @@ export default function Home() {
                 <Phone
                   width={100}
                   height={100}
-                  className="w-7 h-7 mr-2"
+                  className="hidden mr-2 w-7 h-7 sm:block"
                   fill="#2563EB"
                 />
                 +495 95220935
@@ -306,13 +306,13 @@ export default function Home() {
       <main>
         <div className="w-[85%] mx-auto">
           <div className="bg-[url('/banner.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-500 to-transparent w-full h-full">
-              <div className="flex flex-col justify-center h-full md:w-[50%] w-[90%] ml-[7%]">
-                <h1 className="lg:text-4xl font-bold text-white text-xl">
+            <div className="w-full h-full bg-gradient-to-r from-blue-500 to-transparent">
+              <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
+                <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
                   ¡Descubre un mundo de oportunidades educativas en Rusia con
                   EDURU!
                 </h1>
-                <p className="text-white leading-5 mt-5">
+                <p className="mt-5 leading-5 text-white">
                   En EDURU, nos apasiona brindar igualdad de oportunidades a
                   estudiantes latinoamericanos que buscan una educación de
                   calidad a nivel mundial. Con nuestra asesoría especializada y
@@ -323,19 +323,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 my-10 place-items-center w-[90%] md:w-full mx-auto">
+          <div className="grid w-full grid-cols-1 gap-10 my-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
             {beneficios.map((item, index) => (
               <div className="flex items-center" key={index}>
                 <div>
-                  <div className="rounded-full shadow-lg bg-white py-2 px-3">
+                  <div className="px-3 py-2 bg-white rounded-full shadow-lg">
                     {item.icon}
                   </div>
                 </div>
-                <div className="ml-4 grid grid-cols-1 gap-1">
-                  <h1 className="my-0 font-bold text-gray-800 text-lg leading-6">
+                <div className="grid grid-cols-1 gap-1 ml-4">
+                  <h1 className="my-0 text-lg font-bold leading-6 text-gray-800">
                     {item.title}
                   </h1>
-                  <p className="text-gray-500 text-sm">{item.description}</p>
+                  <p className="text-sm text-gray-500">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -343,15 +343,15 @@ export default function Home() {
         </div>
         <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-              <div className="md:w-1/2 md:mr-20">
+            <div className="flex flex-col-reverse items-center justify-center md:flex-row">
+              <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
                 <Titulo>Servicios de EDURU</Titulo>
                 <Line />
 
                 <ul>
                   {servicios.map((item, index) => (
                     <li
-                      className="my-3 text-gray-500 leadingy-6 flex"
+                      className="flex my-3 text-gray-500 leadingy-6"
                       key={index}
                     >
                       {item.icon}
@@ -366,9 +366,9 @@ export default function Home() {
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col md:flex-row items-center justify-center">
+            <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/meet.jpg" alt="nose" />
-              <div className="md:w-1/2 w-full md:ml-20">
+              <div className="w-full md:w-1/2 md:ml-10 lg:ml-20">
                 <Titulo>Testimonios reales</Titulo>
                 <Line />
                 <Slider {...settings}>
@@ -376,20 +376,20 @@ export default function Home() {
                     <div key={index} className="mb-10">
                       <div className="flex items-center my-5">
                         <div>
-                          <div className="rounded-full w-20 h-20 overflow-hidden">
+                          <div className="w-20 h-20 overflow-hidden rounded-full">
                             <Image
                               src={item.imagen}
                               width={500}
                               height={500}
-                              className="w-full h-full object-cover"
+                              className="object-cover w-full h-full"
                             />
                           </div>
                         </div>
-                        <div className="ml-4 grid grid-cols-1 gap-0">
-                          <h1 className="my-0 font-bold text-gray-800 md:text-xl text-base leading-5">
+                        <div className="grid grid-cols-1 gap-0 ml-4">
+                          <h1 className="my-0 text-base font-bold leading-5 text-gray-800 md:text-xl">
                             {item.name}
                           </h1>
-                          <p className="text-gray-500 text-sm leading-4 md:text-base">
+                          <p className="text-sm leading-4 text-gray-500 md:text-base">
                             {item.carrera}
                           </p>
                         </div>
@@ -410,19 +410,19 @@ export default function Home() {
             <Slider {...settings3}>
               {universidades.map((item, index) => (
                 <div key={index} className="p-2">
-                  <div className="rounded-lg overflow-hidden bg-white">
+                  <div className="overflow-hidden bg-white rounded-lg">
                     <div>
-                      <div className="h-64 w-full">
+                      <div className="w-full h-64">
                         <Image
                           src={item.imagen}
                           width={1000}
                           height={1000}
-                          className="w-full h-full object-cover"
+                          className="object-cover w-full h-full"
                         />
                       </div>
                       <div className="m-5">
-                        <p className="text-gray-400 text-sm">{item.type}</p>
-                        <h3 className="text-base font-bold text-gray-800 leading-5 my-1">
+                        <p className="text-sm text-gray-400">{item.type}</p>
+                        <h3 className="my-1 text-base font-bold leading-5 text-gray-800">
                           {item.title}
                         </h3>
                         <Parrafo>{item.description}</Parrafo>
@@ -436,9 +436,9 @@ export default function Home() {
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col md:flex-row items-center justify-center">
+            <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/meet.jpg" alt="nose" />
-              <div className="md:w-1/2 md:ml-20">
+              <div className="w-full md:w-1/2 md:ml-10 lg:mrl-20">
                 <Titulo>Proceso de asesoramiento</Titulo>
                 <Line />
 
@@ -449,14 +449,14 @@ export default function Home() {
                 </Parrafo>
                 <ul className="mt-8">
                   {proceso.map((item, index) => (
-                    <li className="my-3 flex leading-6" key={index}>
+                    <li className="flex my-3 leading-6" key={index}>
                       <div>
-                        <div className="rounded-full bg-blue-500 text-white font-bold py-2 px-4 mr-5">
+                        <div className="px-4 py-2 mr-5 font-bold text-white bg-blue-500 rounded-full">
                           {index + 1}
                         </div>
                       </div>
                       <div className="flex flex-col">
-                        <h1 className="my-0 font-bold text-gray-800 text-lg">
+                        <h1 className="my-0 text-lg font-bold text-gray-800">
                           {item.title}
                         </h1>
                         <Parrafo>{item.description}</Parrafo>
@@ -470,8 +470,8 @@ export default function Home() {
         </div>
         <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-center">
-              <div className="md:w-1/2 md:mr-20">
+            <div className="flex flex-col-reverse items-center justify-center md:flex-row">
+              <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
                 <Titulo>Agenda tu cita</Titulo>
                 <Line />
                 <Calendly />
@@ -482,14 +482,14 @@ export default function Home() {
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col md:flex-row items-center justify-center">
+            <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/meet.jpg" alt="nose" />
-              <div className="md:w-1/2 md:ml-20">
+              <div className="w-full md:w-1/2 md:ml-10 lg:ml-20">
                 <Titulo>Preguntas y respuestas</Titulo>
                 <Line />
                 {preguntas.map((item, index) => (
                   <details className="mb-1" key={index}>
-                    <summary className="border border-blue-500 rounded-lg py-2 px-4 list-none text-gray-800 text-lg leading-5">
+                    <summary className="px-4 py-2 text-lg leading-5 text-gray-800 list-none border border-blue-500 rounded-lg">
                       {item.title}
                     </summary>
                     <div className="my-3">
@@ -505,14 +505,14 @@ export default function Home() {
 
       <footer className="bg-white">
         <div className="mx-auto w-[85%] p-4 py-6 lg:py-20">
-          <div className="grid grid-cols-2 gap-3 sm:gap-8 sm:grid-cols-5 w-full place-content-center">
+          <div className="grid w-full grid-cols-2 gap-3 sm:gap-8 sm:grid-cols-5 place-content-center">
             <div>
               <Image
                 src="/logo.png"
                 alt="logo"
                 width={150}
                 height={50}
-                className="md:w-16 w-12 mb-4"
+                className="w-12 mb-4 md:w-16"
               />
               <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                 © 2023 Marca™. All Rights Reserved.
