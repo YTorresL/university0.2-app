@@ -985,11 +985,11 @@ self.__RSC_MANIFEST={
   },
   "edgeSSRModuleMapping": {},
   "cssFiles": {
-    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\app\\page": [
-      "static/css/app/page.css"
-    ],
     "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\app\\layout": [
       "static/css/app/layout.css"
+    ],
+    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\app\\page": [
+      "static/css/app/page.css"
     ]
   },
   "clientModules": {
@@ -2721,6 +2721,27 @@ self.__RSC_MANIFEST={
       ],
       "async": false
     },
+    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\app\\globals.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\node_modules\\normalize.css\\normalize.css#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    },
+    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"500\",\"700\",\"900\"],\"subsets\":[\"latin\"]}],\"variableName\":\"font\"}#": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/app/layout.css"
+      ]
+    },
     "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\node_modules\\slick-carousel\\slick\\slick-theme.css#": {
       "id": "null",
       "name": "default",
@@ -3142,27 +3163,6 @@ self.__RSC_MANIFEST={
         "app/page:static/chunks/app/page.js"
       ],
       "async": false
-    },
-    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\app\\globals.css#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/layout.css"
-      ]
-    },
-    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\node_modules\\normalize.css\\normalize.css#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/layout.css"
-      ]
-    },
-    "C:\\Users\\yalit\\Desktop\\YTorres\\university0.2-app\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Roboto\",\"arguments\":[{\"weight\":[\"500\",\"700\",\"900\"],\"subsets\":[\"latin\"]}],\"variableName\":\"font\"}#": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/layout.css"
-      ]
     }
   }
 }

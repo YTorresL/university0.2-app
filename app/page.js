@@ -21,7 +21,7 @@ import ImageWidth from "@/components/ImageWidth/page"
 const beneficios = [
   {
     icon: (
-      <Custom width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+      <Custom width={100} height={100} className="w-10 h-10" fill="#001959" />
     ),
     title: "Experiencia personalizada",
     description: "Asesores con amplio conocimiento del sistema educativo ruso.",
@@ -32,7 +32,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#2563EB"
+        fill="#001959"
       />
     ),
     title: "Universidades de prestigio",
@@ -40,7 +40,7 @@ const beneficios = [
   },
   {
     icon: (
-      <Advisor width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+      <Advisor width={100} height={100} className="w-10 h-10" fill="#001959" />
     ),
     title: "Asesoría integral",
     description: "Apoyo personalizado en cada etapa del proceso educativo.",
@@ -52,7 +52,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#2563EB"
+        fill="#001959"
       />
     ),
     title: "Comunidad estudiantil",
@@ -70,7 +70,7 @@ const servicios = [
         width={100}
         height={100}
         className="w-8 h-8 mr-3"
-        fill="#2563EB"
+        fill="#001959"
       />
     ),
   },
@@ -81,7 +81,7 @@ const servicios = [
         width={100}
         height={100}
         className="w-8 h-8 mr-3"
-        fill="#2563EB"
+        fill="#001959"
       />
     ),
   },
@@ -92,7 +92,7 @@ const servicios = [
         width={100}
         height={100}
         className="w-8 h-8 mr-3"
-        fill="#2563EB"
+        fill="#001959"
       />
     ),
   },
@@ -103,7 +103,7 @@ const servicios = [
         width={100}
         height={100}
         className="w-8 h-8 mr-3"
-        fill="#2563EB"
+        fill="#001959"
       />
     ),
   },
@@ -115,7 +115,7 @@ const servicios = [
         width={100}
         height={100}
         className="w-8 h-8 mr-3"
-        fill="#2563EB"
+        fill="#001959"
       />
     ),
   },
@@ -274,14 +274,14 @@ export default function Home() {
                   width={100}
                   height={100}
                   className="hidden mr-2 w-7 h-7 sm:block"
-                  fill="#2563EB"
+                  fill="#001959"
                 />
                 +495 95220935
               </span>
             </div>
             <Button
               title="Asesorias"
-              styles="bg-blue-600 hover:bg-blue-700 text-white ml-4 md:ml-7"
+              styles="bg-[#001959] hover:bg-[#00227A] text-white ml-4 md:ml-7"
               link="/asesoria"
             />
           </div>
@@ -290,7 +290,7 @@ export default function Home() {
       <main>
         <div className="w-[85%] mx-auto">
           <div className="bg-[url('/banner.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-r from-blue-500 to-transparent">
+            <div className="w-full h-full bg-gradient-to-r from-[#001959] to-transparent">
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
                   ¡Descubre un mundo de oportunidades educativas en Rusia con
@@ -309,13 +309,13 @@ export default function Home() {
 
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
             {beneficios.map((item, index) => (
-              <div className="flex flex-col md:items-center" key={index}>
-                <div className="mb-4 flex">
+              <div className="flex flex-col items-center" key={index}>
+                <div className="mb-4">
                   <div className="px-3 py-2 bg-white rounded-full shadow-lg">
                     {item.icon}
                   </div>
                 </div>
-                <div className="grid grid-cols-1 gap-1 ml-4">
+                <div className="grid grid-cols-1 gap-1 ml-4 text-center">
                   <h1 className="my-0 text-lg font-bold leading-6 text-gray-800">
                     {item.title}
                   </h1>

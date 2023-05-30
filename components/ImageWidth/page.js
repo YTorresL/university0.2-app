@@ -9,7 +9,7 @@ export default function ImageWidth({ src, alt }) {
           alt={alt}
           width={1000}
           height={1000}
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full transform hover:scale-105 transition duration-500 ease-in-out"
         />
       </div>
     </div>
