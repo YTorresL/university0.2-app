@@ -23,7 +23,7 @@ import ImageWidth from "@/components/ImageWidth/page"
 const beneficios = [
   {
     icon: (
-      <Custom width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
+      <Custom width={100} height={100} className="w-10 h-10" fill="#2563EB" />
     ),
     title: "Experiencia personalizada",
     description: "Asesores con amplio conocimiento del sistema educativo ruso.",
@@ -34,7 +34,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#CADAEB"
+        fill="#2563EB"
       />
     ),
     title: "Universidades de prestigio",
@@ -42,14 +42,14 @@ const beneficios = [
   },
   {
     icon: (
-      <Advisor width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
+      <Advisor width={100} height={100} className="w-10 h-10" fill="#2563EB" />
     ),
     title: "Asesoría integral",
     description: "Apoyo personalizado en cada etapa del proceso educativo.",
   },
   {
     icon: (
-      <Money width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
+      <Money width={100} height={100} className="w-10 h-10" fill="#2563EB" />
     ),
     title: "Opciones de financiamiento",
     description: "Explora becas y programas de ayuda financiera.",
@@ -60,7 +60,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#CADAEB"
+        fill="#2563EB"
       />
     ),
     title: "Comunidad estudiantil",
@@ -69,7 +69,7 @@ const beneficios = [
   },
   {
     icon: (
-      <Trust width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
+      <Trust width={100} height={100} className="w-10 h-10" stroke="#2563EB" />
     ),
     title: "Confianza garantizada",
     description:
@@ -285,7 +285,7 @@ export default function Home() {
           />
           <div className="flex items-center">
             <div className="hidden min-[375px]:block">
-              <span className="flex items-center text-gray-800">
+              <span className="flex items-center">
                 <Phone
                   width={100}
                   height={100}
@@ -306,7 +306,7 @@ export default function Home() {
       <main>
         <div className="w-[85%] mx-auto">
           <div className="bg-[url('/banner.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-r from-[#5275C7] to-transparent">
+            <div className="w-full h-full bg-gradient-to-r from-blue-500 to-transparent">
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
                   ¡Descubre un mundo de oportunidades educativas en Rusia con
@@ -341,7 +341,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="bg-[#CADAEB]">
+        <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse items-center justify-center md:flex-row">
               <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
@@ -364,7 +364,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#FEFEFE]">
+        <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/meet.jpg" alt="nose" />
@@ -402,7 +402,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#004090]">
+        <div className="bg-[#ECF0FB]">
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Universidades y programas</Titulo>
             <Line />
@@ -480,7 +480,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#001959]">
+        <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/meet.jpg" alt="nose" />
