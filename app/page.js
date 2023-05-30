@@ -47,13 +47,7 @@ const beneficios = [
     title: "Asesoría integral",
     description: "Apoyo personalizado en cada etapa del proceso educativo.",
   },
-  {
-    icon: (
-      <Money width={100} height={100} className="w-10 h-10" fill="#2563EB" />
-    ),
-    title: "Opciones de financiamiento",
-    description: "Explora becas y programas de ayuda financiera.",
-  },
+
   {
     icon: (
       <Community
@@ -66,14 +60,6 @@ const beneficios = [
     title: "Comunidad estudiantil",
     description:
       "Conexiones con una red diversa de estudiantes y profesionales.",
-  },
-  {
-    icon: (
-      <Trust width={100} height={100} className="w-10 h-10" stroke="#2563EB" />
-    ),
-    title: "Confianza garantizada",
-    description:
-      "Trayectoria comprobada en la realización de sueños académicos.",
   },
 ]
 
@@ -323,7 +309,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+          <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
             {beneficios.map((item, index) => (
               <div className="flex flex-col md:items-center" key={index}>
                 <div className="mb-4 flex">
