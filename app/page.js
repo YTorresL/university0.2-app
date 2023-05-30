@@ -6,9 +6,7 @@ import {
   Advisor,
   Community,
   Custom,
-  Money,
   Phone,
-  Trust,
   University,
 } from "@/components/Icons/page"
 import Line from "@/components/Line/page"
