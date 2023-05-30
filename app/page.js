@@ -23,7 +23,7 @@ import ImageWidth from "@/components/ImageWidth/page"
 const beneficios = [
   {
     icon: (
-      <Custom width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+      <Custom width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
     ),
     title: "Experiencia personalizada",
     description: "Asesores con amplio conocimiento del sistema educativo ruso.",
@@ -34,7 +34,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#2563EB"
+        fill="#CADAEB"
       />
     ),
     title: "Universidades de prestigio",
@@ -42,14 +42,14 @@ const beneficios = [
   },
   {
     icon: (
-      <Advisor width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+      <Advisor width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
     ),
     title: "Asesoría integral",
     description: "Apoyo personalizado en cada etapa del proceso educativo.",
   },
   {
     icon: (
-      <Money width={100} height={100} className="w-10 h-10" fill="#2563EB" />
+      <Money width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
     ),
     title: "Opciones de financiamiento",
     description: "Explora becas y programas de ayuda financiera.",
@@ -60,7 +60,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#2563EB"
+        fill="#CADAEB"
       />
     ),
     title: "Comunidad estudiantil",
@@ -69,7 +69,7 @@ const beneficios = [
   },
   {
     icon: (
-      <Trust width={100} height={100} className="w-10 h-10" stroke="#2563EB" />
+      <Trust width={100} height={100} className="w-10 h-10" fill="#CADAEB" />
     ),
     title: "Confianza garantizada",
     description:
@@ -285,7 +285,7 @@ export default function Home() {
           />
           <div className="flex items-center">
             <div className="hidden min-[375px]:block">
-              <span className="flex items-center">
+              <span className="flex items-center text-gray-800">
                 <Phone
                   width={100}
                   height={100}
@@ -306,7 +306,7 @@ export default function Home() {
       <main>
         <div className="w-[85%] mx-auto">
           <div className="bg-[url('/banner.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-r from-blue-500 to-transparent">
+            <div className="w-full h-full bg-gradient-to-r from-[#5275C7] to-transparent">
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
                   ¡Descubre un mundo de oportunidades educativas en Rusia con
@@ -323,10 +323,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid w-full grid-cols-1 gap-10 my-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+          <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {beneficios.map((item, index) => (
-              <div className="flex items-center" key={index}>
-                <div>
+              <div className="flex flex-col md:items-center" key={index}>
+                <div className="mb-4 flex">
                   <div className="px-3 py-2 bg-white rounded-full shadow-lg">
                     {item.icon}
                   </div>
@@ -341,7 +341,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="bg-[#ECF0FB]">
+        <div className="bg-[#CADAEB]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse items-center justify-center md:flex-row">
               <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
@@ -364,7 +364,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="bg-[#FEFEFE]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/meet.jpg" alt="nose" />
@@ -402,7 +402,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#ECF0FB]">
+        <div className="bg-[#004090]">
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Universidades y programas</Titulo>
             <Line />
@@ -480,7 +480,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="bg-[#001959]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/meet.jpg" alt="nose" />
