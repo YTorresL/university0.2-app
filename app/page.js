@@ -159,19 +159,6 @@ const proceso = [
   },
 ]
 
-const preguntas = [
-  {
-    title: "System Requirements",
-    description:
-      "Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.",
-  },
-  {
-    title: "Inicia tu carrera",
-    description:
-      "Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.",
-  },
-]
-
 const universidades = [
   {
     type: "Universidad",
@@ -309,14 +296,17 @@ export default function Home() {
 
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
             {beneficios.map((item, index) => (
-              <div className="flex flex-col items-center" key={index}>
+              <div
+                className="flex flex-col items-center hover:shadow-lg rounded-lg py-4"
+                key={index}
+              >
                 <div className="mb-4">
-                  <div className="px-3 py-2 bg-white rounded-full shadow-lg">
+                  <div className="p-3 bg-white rounded-lg shadow-lg">
                     {item.icon}
                   </div>
                 </div>
-                <div className="grid grid-cols-1 gap-1 ml-4 text-center">
-                  <h1 className="my-0 text-lg font-bold leading-6 text-gray-800">
+                <div className="grid grid-cols-1 gap-1 mx-2 text-center">
+                  <h1 className="my-0 text-lg font-bold leading-6 text-[#001959]">
                     {item.title}
                   </h1>
                   <p className="text-sm text-gray-500">{item.description}</p>
@@ -325,7 +315,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="bg-[#ECF0FB]">
+        <div className="bg-[#f3f9ff]">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col-reverse items-center justify-center md:flex-row">
               <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
@@ -370,7 +360,7 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="grid grid-cols-1 gap-0 ml-4">
-                          <h1 className="my-0 text-base font-bold leading-5 text-gray-800 md:text-xl">
+                          <h1 className="my-0 text-base font-bold leading-5 text-[#001959] md:text-xl">
                             {item.name}
                           </h1>
                           <p className="text-sm leading-4 text-gray-500 md:text-base">
@@ -386,7 +376,20 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#ECF0FB]">
+        <div>
+          <div className="sm:w-[60%] mx-auto py-16 w-full">
+            <div className="text-center">
+              <Titulo>Preguntas frecuentes</Titulo>
+              <Line center="yes" />
+              <Parrafo>
+                Con nuestra asesoría especializada y un equipo comprometido, te
+                ofrecemos la puerta de entrada a las mejores universidades en
+                Rusia.
+              </Parrafo>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[#f3f9ff]">
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Universidades y programas</Titulo>
             <Line />
@@ -406,7 +409,7 @@ export default function Home() {
                       </div>
                       <div className="m-5">
                         <p className="text-sm text-gray-400">{item.type}</p>
-                        <h3 className="my-1 text-base font-bold leading-5 text-gray-800">
+                        <h3 className="my-1 text-base font-bold leading-5 text-[#001959]">
                           {item.title}
                         </h3>
                         <Parrafo>{item.description}</Parrafo>
@@ -435,12 +438,12 @@ export default function Home() {
                   {proceso.map((item, index) => (
                     <li className="flex my-3 leading-6" key={index}>
                       <div>
-                        <div className="px-4 py-2 mr-5 font-bold text-white bg-blue-500 rounded-full">
+                        <div className="px-4 py-2 mr-5 font-bold text-white bg-[#001959] rounded-full">
                           {index + 1}
                         </div>
                       </div>
                       <div className="flex flex-col">
-                        <h1 className="my-0 text-lg font-bold text-gray-800">
+                        <h1 className="my-0 text-lg font-bold text-[#001959]">
                           {item.title}
                         </h1>
                         <Parrafo>{item.description}</Parrafo>
@@ -452,35 +455,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#ECF0FB]">
-          <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col-reverse items-center justify-center md:flex-row">
-              <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                <Titulo>Agenda tu cita</Titulo>
-                <Line />
+        <div className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
+          <div className="bg-[#001959]/70">
+            <div className="w-[85%] mx-auto pt-5">
+              <div className="flex flex-col-reverse items-center justify-center md:flex-row">
+                <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
+                  <h1 className="text-white">Proceso de asesoramiento</h1>
+                  <p className="mt-5 text-white">
+                    En EDURU, te brindamos asesoría profesional y seguridad en
+                    cada paso del proceso de admisión. ¡Cumple tus sueños
+                    académicos con nosotros!
+                  </p>
+                </div>
                 <Calendly />
-              </div>
-              <ImageWidth src="/meet.jpg" alt="nose" />
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/meet.jpg" alt="nose" />
-              <div className="w-full md:w-1/2 md:ml-10 lg:ml-20">
-                <Titulo>Preguntas y respuestas</Titulo>
-                <Line />
-                {preguntas.map((item, index) => (
-                  <details className="mb-1" key={index}>
-                    <summary className="px-4 py-2 text-lg leading-5 text-gray-800 list-none border border-blue-500 rounded-lg">
-                      {item.title}
-                    </summary>
-                    <div className="my-3">
-                      <Parrafo>{item.description}</Parrafo>
-                    </div>
-                  </details>
-                ))}
               </div>
             </div>
           </div>
