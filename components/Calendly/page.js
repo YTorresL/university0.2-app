@@ -20,7 +20,6 @@ export default function CalOpen() {
           width: "100%",
           height: "100%",
           overflow: "scroll",
-          border: "8",
         }}
       />
     </div>

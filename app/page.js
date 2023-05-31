@@ -334,14 +334,14 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <ImageWidth src="/meet.jpg" alt="nose" />
+              <ImageWidth src="/Inscripción.jpg" alt="nose" />
             </div>
           </div>
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/meet.jpg" alt="nose" />
+              <ImageWidth src="/testimonios.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg:ml-20">
                 <Titulo>Testimonios reales</Titulo>
                 <Line />
@@ -424,7 +424,7 @@ export default function Home() {
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/meet.jpg" alt="nose" />
+              <ImageWidth src="/Asesoramiento1.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg:mrl-20">
                 <Titulo>Proceso de asesoramiento</Titulo>
                 <Line />
