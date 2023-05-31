@@ -15,7 +15,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Parrafo from "@/components/Paragraph/page"
 import Titulo from "@/components/Title/page"
-import Calendly from "@/components/Calendly/page"
+import CalOpen from "@/components/Calendly/page"
 import ImageWidth from "@/components/ImageWidth/page"
 
 const beneficios = [
@@ -457,17 +457,19 @@ export default function Home() {
         </div>
         <div className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
           <div className="bg-[#001959]/70">
-            <div className="w-[85%] mx-auto pt-5">
+            <div className="w-[85%] mx-auto py-5">
               <div className="flex flex-col-reverse items-center justify-center md:flex-row">
                 <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                  <h1 className="text-white">Proceso de asesoramiento</h1>
+                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                    Proceso de asesoramiento
+                  </h1>
                   <p className="mt-5 text-white">
                     En EDURU, te brindamos asesoría profesional y seguridad en
                     cada paso del proceso de admisión. ¡Cumple tus sueños
                     académicos con nosotros!
                   </p>
                 </div>
-                <Calendly />
+                <CalOpen />
               </div>
             </div>
           </div>
