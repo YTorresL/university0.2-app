@@ -61,66 +61,6 @@ const beneficios = [
   },
 ]
 
-const servicios = [
-  {
-    title:
-      "Asesoramiento especializado en la elección de universidades y programas de estudio.",
-    icon: (
-      <Advisor
-        width={100}
-        height={100}
-        className="w-8 h-8 mr-3"
-        fill="#001959"
-      />
-    ),
-  },
-  {
-    title: "Gestión eficiente de trámites de visas y documentación requerida.",
-    icon: (
-      <Advisor
-        width={100}
-        height={100}
-        className="w-8 h-8 mr-3"
-        fill="#001959"
-      />
-    ),
-  },
-  {
-    title: "Búsqueda de becas y programas de financiamiento.",
-    icon: (
-      <Advisor
-        width={100}
-        height={100}
-        className="w-8 h-8 mr-3"
-        fill="#001959"
-      />
-    ),
-  },
-  {
-    title: "Apoyo en la búsqueda de alojamiento y adaptación al entorno ruso.",
-    icon: (
-      <Advisor
-        width={100}
-        height={100}
-        className="w-8 h-8 mr-3"
-        fill="#001959"
-      />
-    ),
-  },
-  {
-    title:
-      "Asistencia integral durante todo el proceso, desde la solicitud hasta la graduación.",
-    icon: (
-      <Advisor
-        width={100}
-        height={100}
-        className="w-8 h-8 mr-3"
-        fill="#001959"
-      />
-    ),
-  },
-]
-
 const testimonios = [
   {
     name: "Alejandra Gabaldón",
@@ -313,29 +253,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-        <div className="bg-[#f3f9ff]">
-          <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col-reverse items-center justify-center md:flex-row">
-              <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                <Titulo>Servicios de EDURU</Titulo>
-                <Line />
-
-                <ul>
-                  {servicios.map((item, index) => (
-                    <li
-                      className="flex my-3 text-gray-500 leadingy-6"
-                      key={index}
-                    >
-                      {item.icon}
-                      {item.title}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <ImageWidth src="/Inscripción.jpg" alt="nose" />
-            </div>
           </div>
         </div>
         <div>
