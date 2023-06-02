@@ -61,21 +61,6 @@ const beneficios = [
   },
 ]
 
-const testimonios = [
-  {
-    name: "Alejandra Gabaldón",
-    comentario: `Fue una experiencia increíble, me encantó la ciudad, la universidad, la gente, la cultura, todo. Estoy muy agradecida con EDURU por ayudarme a cumplir mi sueño de estudiar en Rusia.`,
-    carrera: "Relaciones internacionales",
-    imagen: "/profile.jpg",
-  },
-  {
-    name: "Alejandra Gabaldón",
-    comentario: `Fue una experiencia increíble, me encantó la ciudad, la universidad, la gente, la cultura, todo. Estoy muy agradecida con EDURU por ayudarme a cumplir mi sueño de estudiar en Rusia.`,
-    carrera: "Relaciones internacionales",
-    imagen: "/profile.jpg",
-  },
-]
-
 const proceso = [
   {
     title: "Inscripción",
@@ -141,6 +126,36 @@ const universidades = [
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/meet.jpg",
+  },
+]
+
+const preguntas = [
+  {
+    title: "¿Cuáles son los requisitos para estudiar en Rusia como extranjero?",
+    description:
+      "Los requisitos pueden variar según la universidad y el programa, pero generalmente necesitarás presentar una solicitud de admisión, un pasaporte válido, certificados de estudios anteriores, un formulario de solicitud de visa, un seguro médico y pruebas de dominio del idioma ruso (a menos que el programa se imparta en inglés).",
+  },
+  {
+    title:
+      "¿Qué opciones de financiamiento están disponibles para estudiar en Rusia?",
+    description:
+      "Hay varias opciones de financiamiento disponibles, como becas gubernamentales, becas universitarias, programas de intercambio, financiamiento personal o préstamos educativos. Puedes investigar las becas ofrecidas por el gobierno ruso, tu propio gobierno, organizaciones internacionales y fundaciones educativas.",
+  },
+  {
+    title: "¿Es necesario hablar ruso para estudiar en Rusia?",
+    description:
+      "Depende del programa y la universidad. Algunos programas se imparten completamente en inglés, especialmente a nivel de posgrado, mientras que otros requieren un nivel mínimo de competencia en ruso. Sin embargo, aprender ruso básico puede ser beneficioso para la vida cotidiana y la interacción con los lugareños.",
+  },
+  {
+    title: "¿Cómo es la vida estudiantil en Rusia?",
+    description:
+      "La vida estudiantil en Rusia es vibrante y diversa. Las universidades ofrecen una amplia gama de actividades extracurriculares, clubes estudiantiles y eventos culturales. Además, hay muchas oportunidades para explorar la cultura rusa, como visitar museos, asistir a festivales y viajar a diferentes ciudades del país durante las vacaciones.",
+  },
+  {
+    title:
+      "¿Cuál es el costo de vida en Rusia para los estudiantes extranjeros?",
+    description:
+      "El costo de vida en Rusia puede variar según la ciudad y el estilo de vida individual. En general, las ciudades más grandes como Moscú y San Petersburgo tienden a ser más costosas que las ciudades más pequeñas. Sin embargo, en comparación con otros destinos de estudio en Europa o América del Norte, Rusia puede ser más asequible en términos de alojamiento, transporte y alimentos.",
   },
 ]
 
@@ -237,11 +252,11 @@ export default function Home() {
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
             {beneficios.map((item, index) => (
               <div
-                className="flex flex-col items-center hover:shadow-lg rounded-lg py-4"
+                className="flex flex-col items-center hover:shadow-lg rounded-lg py-4 hover:shadow-black/5 transition duration-500 ease-in-out"
                 key={index}
               >
                 <div className="mb-4">
-                  <div className="p-3 bg-white rounded-lg shadow-lg">
+                  <div className="p-3 bg-white rounded-lg shadow-lg shadow-black/5">
                     {item.icon}
                   </div>
                 </div>
@@ -256,6 +271,25 @@ export default function Home() {
           </div>
         </div>
         <div>
+          <div className="sm:w-[60%] mx-auto py-16 w-[85%]">
+            <div className="text-center">
+              <Titulo>¿Estás inquieto acerca del idioma?</Titulo>
+              <Line center="yes" />
+              <Parrafo>
+                En el ámbito educativo de Rusia, se encuentran disponibles las
+                facultades preparatorias diseñadas especialmente para
+                estudiantes internacionales de distintos países. Estas
+                facultades ofrecen cursos universitarios en grupos que abordan
+                disciplinas relacionadas con las especialidades elegidas.
+                Durante el primer año, conocido como "preuniversitario", tendrás
+                la oportunidad de aprender el idioma ruso desde los fundamentos
+                y también recibirás nivelación académica para prepararte de
+                manera adecuada.
+              </Parrafo>
+            </div>
+          </div>
+        </div>
+        <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/testimonios.jpg" alt="nose" />
@@ -263,46 +297,16 @@ export default function Home() {
                 <Titulo>Testimonios reales</Titulo>
                 <Line />
                 <Slider {...settings}>
-                  {testimonios.map((item, index) => (
-                    <div key={index} className="mb-10">
-                      <div className="flex items-center my-5">
-                        <div>
-                          <div className="w-20 h-20 overflow-hidden rounded-full">
-                            <Image
-                              src={item.imagen}
-                              width={500}
-                              height={500}
-                              className="object-cover w-full h-full"
-                            />
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-1 gap-0 ml-4">
-                          <h1 className="my-0 text-base font-bold leading-5 text-[#001959] md:text-xl">
-                            {item.name}
-                          </h1>
-                          <p className="text-sm leading-4 text-gray-500 md:text-base">
-                            {item.carrera}
-                          </p>
-                        </div>
-                      </div>
-                      <Parrafo>{item.comentario}</Parrafo>
-                    </div>
-                  ))}
+                  <div className="w-full h-72 rounded-lg overflow-hidden">
+                    <Image
+                      src="/Zoom.jpg"
+                      width={1000}
+                      height={1000}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </Slider>
               </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="sm:w-[60%] mx-auto py-16 w-full">
-            <div className="text-center">
-              <Titulo>Preguntas frecuentes</Titulo>
-              <Line center="yes" />
-              <Parrafo>
-                Con nuestra asesoría especializada y un equipo comprometido, te
-                ofrecemos la puerta de entrada a las mejores universidades en
-                Rusia.
-              </Parrafo>
             </div>
           </div>
         </div>
@@ -313,8 +317,8 @@ export default function Home() {
 
             <Slider {...settings3}>
               {universidades.map((item, index) => (
-                <div key={index} className="p-2">
-                  <div className="overflow-hidden bg-white rounded-lg">
+                <div key={index} className="px-2 py-3">
+                  <div className="overflow-hidden bg-white rounded-lg transform hover:-translate-y-3 transition duration-500 ease-in-out hover:shadow-lg hover:shadow-black/5">
                     <div>
                       <div className="w-full h-64">
                         <Image
@@ -342,7 +346,7 @@ export default function Home() {
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/Asesoramiento1.jpg" alt="nose" />
-              <div className="w-full md:w-1/2 md:ml-10 lg:mrl-20">
+              <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <Titulo>Proceso de asesoramiento</Titulo>
                 <Line />
 
@@ -374,19 +378,53 @@ export default function Home() {
         </div>
         <div className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
           <div className="bg-[#001959]/70">
-            <div className="w-[85%] mx-auto py-5">
+            <div className="w-[85%] mx-auto py-10">
               <div className="flex flex-col-reverse items-center justify-center md:flex-row">
                 <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
-                    Proceso de asesoramiento
+                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl m-0">
+                    ¿Sueñas con estudiar en Rusia?
                   </h1>
-                  <p className="mt-5 text-white">
-                    En EDURU, te brindamos asesoría profesional y seguridad en
-                    cada paso del proceso de admisión. ¡Cumple tus sueños
-                    académicos con nosotros!
+                  <p className="mt-3 text-white">
+                    ¡Hazlo realidad con nuestro asesoramiento experto! Te
+                    guiaremos en el proceso de planificación, trámites y
+                    selección de universidades. Obtén información confiable y
+                    precisa sobre visas, programas de estudio y más.
+                  </p>
+                  <p className="mt-3 text-white">
+                    ¡Contáctanos hoy mismo para comenzar tu aventura educativa
+                    en Rusia! Haz clic aquí para solicitar tu asesoramiento
+                    personalizado.
                   </p>
                 </div>
-                <CalOpen />
+                <div className="my-6">
+                  <CalOpen />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="w-[85%] mx-auto py-16">
+            <div className="flex flex-col items-center justify-center md:flex-row">
+              <ImageWidth src="/Asesoramiento1.jpg" alt="nose" />
+              <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
+                <Titulo>FAQ</Titulo>
+                <Line />
+
+                <Parrafo>
+                  Tienes alguna duda, te invitamos a revisar las preguntas más
+                  frecuentes.
+                </Parrafo>
+                {preguntas.map((item, index) => (
+                  <details className="mt-1" key={index}>
+                    <summary className="flex leading-6 text-[#001959] border-b border-[#001959] p-2">
+                      {item.title}
+                    </summary>
+                    <div className="m-3">
+                      <Parrafo>{item.description}</Parrafo>
+                    </div>
+                  </details>
+                ))}
               </div>
             </div>
           </div>

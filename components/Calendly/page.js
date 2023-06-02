@@ -7,13 +7,13 @@ export default function CalOpen() {
       const cal = await getCalApi()
       cal("ui", {
         theme: "light",
-        styles: { branding: { brandColor: "#c42626" } },
+        styles: { branding: { brandColor: "#001959" } },
         hideEventTypeDetails: true,
       })
     })()
   }, [])
   return (
-    <div className="h-[26rem] rounded-lg overflow-hidden bg-white">
+    <div className="h-[22rem] rounded-lg overflow-hidden bg-white">
       <Cal
         calLink="ytorres-vvcghs/30min"
         style={{
