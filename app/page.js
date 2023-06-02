@@ -285,7 +285,7 @@ export default function Home() {
               <div className="mt-3"></div>
               <Parrafo>
                 Durante el primer año, conocido como
-                {`'`}preuniversitario{`'`}, tendrás la oportunidad de aprender
+                {` "`}preuniversitario{`"`}, tendrás la oportunidad de aprender
                 el idioma ruso desde los fundamentos y también recibirás
                 nivelación académica para prepararte de manera adecuada.
               </Parrafo>
