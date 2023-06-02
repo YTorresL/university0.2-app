@@ -281,6 +281,9 @@ export default function Home() {
                 estudiantes internacionales de distintos países. Estas
                 facultades ofrecen cursos universitarios en grupos que abordan
                 disciplinas relacionadas con las especialidades elegidas.
+              </Parrafo>
+              <div className="mt-3"></div>
+              <Parrafo>
                 Durante el primer año, conocido como
                 {`'`}preuniversitario{`'`}, tendrás la oportunidad de aprender
                 el idioma ruso desde los fundamentos y también recibirás
