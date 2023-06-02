@@ -281,10 +281,10 @@ export default function Home() {
                 estudiantes internacionales de distintos países. Estas
                 facultades ofrecen cursos universitarios en grupos que abordan
                 disciplinas relacionadas con las especialidades elegidas.
-                Durante el primer año, conocido como
-                {`'`}preuniversitario{`'`}, tendrás la oportunidad de aprender
-                el idioma ruso desde los fundamentos y también recibirás
-                nivelación académica para prepararte de manera adecuada.
+                Durante el primer año, conocido como preuniversitario, tendrás
+                la oportunidad de aprender el idioma ruso desde los fundamentos
+                y también recibirás nivelación académica para prepararte de
+                manera adecuada.
               </Parrafo>
             </div>
           </div>
