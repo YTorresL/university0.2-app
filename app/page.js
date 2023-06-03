@@ -360,7 +360,7 @@ export default function Home() {
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/Asesoramiento.jpg" alt="nose" />
+              <ImageWidth src="/asesoramiento.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <Titulo>Proceso de asesoramiento</Titulo>
                 <Line />
