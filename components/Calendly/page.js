@@ -1,6 +1,5 @@
 import Cal, { getCalApi } from "@calcom/embed-react"
 import { useEffect } from "react"
-import Button from "../Button/page"
 
 export default function CalOpen() {
   useEffect(() => {
@@ -38,10 +37,11 @@ export function CalPop() {
     })()
   }, [])
   return (
-    <Button
+    <button
+      className="py-2 px-4 rounded-lg bg-[#001959] hover:bg-[#00227A] text-white ml-4 md:ml-7"
       data-cal-link="ytorres-vvcghs/30min"
-      title="Asesorias"
-      styles="bg-[#001959] hover:bg-[#00227A] text-white ml-4 md:ml-7"
-    />
+    >
+      Asesorias
+    </button>
   )
 }
