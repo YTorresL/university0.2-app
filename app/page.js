@@ -4,6 +4,7 @@ import Button from "@/components/Button/page"
 import Link from "next/link"
 import {
   Advisor,
+  Calendar,
   Community,
   Custom,
   Phone,
@@ -86,18 +87,18 @@ const proceso = [
 
 const universidades = [
   {
-    type: "Universidad",
+    type: "Moscú",
     title: "Universidad Estatal de Moscú",
     description:
       "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/meet.jpg",
+    imagen: "/Moscu.jpg",
   },
   {
-    type: "Universidad",
+    type: "San Petersburgo",
     title: "Universidad de San Petersburgo",
     description:
       "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/meet.jpg",
+    imagen: "/sanpetersburgo.jpg",
   },
   {
     type: "Universidad",
@@ -245,6 +246,17 @@ export default function Home() {
                   un equipo comprometido, te ofrecemos la puerta de entrada a
                   las mejores universidades en Rusia.
                 </p>
+                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/80 w-56 md:w-72 py-2 shadow-lg">
+                  <div className="flex justify-center items-center">
+                    <Calendar fill="#001959" className="h-7 w-7" />
+                    <div className="ml-3 md:ml-4">
+                      <span className="text-white text-sm">
+                        Inicio de Inscripciones
+                      </span>
+                      <p className="mt-1 text-white">7 de Junio</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
