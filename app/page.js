@@ -246,7 +246,7 @@ export default function Home() {
                   un equipo comprometido, te ofrecemos la puerta de entrada a
                   las mejores universidades en Rusia.
                 </p>
-                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/80 w-56 md:w-72 py-2 shadow-lg">
+                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/50 w-56 md:w-72 py-2 shadow-lg">
                   <div className="flex justify-center items-center">
                     <Calendar fill="#001959" className="h-7 w-7" />
                     <div className="ml-3 md:ml-4">
