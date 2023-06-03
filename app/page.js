@@ -237,10 +237,10 @@ export default function Home() {
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
                   ¡Descubre un mundo de oportunidades educativas en Rusia con
-                  EDURU!
+                  Marca!
                 </h1>
                 <p className="mt-5 leading-5 text-white">
-                  En EDURU, nos apasiona brindar igualdad de oportunidades a
+                  En Marca, nos apasiona brindar igualdad de oportunidades a
                   estudiantes latinoamericanos que buscan una educación de
                   calidad a nivel mundial. Con nuestra asesoría especializada y
                   un equipo comprometido, te ofrecemos la puerta de entrada a
@@ -366,7 +366,7 @@ export default function Home() {
                 <Line />
 
                 <Parrafo>
-                  En EDURU, te brindamos asesoría profesional y seguridad en
+                  En Marca, te brindamos asesoría profesional y seguridad en
                   cada paso del proceso de admisión. ¡Cumple tus sueños
                   académicos con nosotros!
                 </Parrafo>
@@ -421,7 +421,7 @@ export default function Home() {
         <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/Asesoramiento1.jpg" alt="nose" />
+              <ImageWidth src="/Inscripción.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <Titulo>FAQ</Titulo>
                 <Line />
