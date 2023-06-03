@@ -253,7 +253,7 @@ export default function Home() {
                       <span className="text-white text-sm">
                         Inicio de Inscripciones
                       </span>
-                      <p className="text-white">7 de Junio</p>
+                      <p className="mt-0 text-white">7 de Junio</p>
                     </div>
                   </div>
                 </div>
