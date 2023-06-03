@@ -91,7 +91,7 @@ const universidades = [
     title: "Universidad Estatal de Moscú",
     description:
       "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/Moscu.jpg",
+    imagen: "/moscu.jpg",
   },
   {
     type: "San Petersburgo",
