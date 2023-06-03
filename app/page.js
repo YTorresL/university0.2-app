@@ -16,7 +16,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Parrafo from "@/components/Paragraph/page"
 import Titulo from "@/components/Title/page"
-import CalOpen from "@/components/Calendly/page"
+import CalOpen, { CalPop } from "@/components/Calendly/page"
 import ImageWidth from "@/components/ImageWidth/page"
 
 const beneficios = [
@@ -222,11 +222,7 @@ export default function Home() {
                 +495 95220935
               </span>
             </div>
-            <Button
-              title="Asesorias"
-              styles="bg-[#001959] hover:bg-[#00227A] text-white ml-4 md:ml-7"
-              link="/asesoria"
-            />
+            <CalPop />
           </div>
         </div>
       </header>

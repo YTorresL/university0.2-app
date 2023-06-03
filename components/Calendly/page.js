@@ -1,5 +1,6 @@
 import Cal, { getCalApi } from "@calcom/embed-react"
 import { useEffect } from "react"
+import Button from "../Button/page"
 
 export default function CalOpen() {
   useEffect(() => {
@@ -23,5 +24,24 @@ export default function CalOpen() {
         }}
       />
     </div>
+  )
+}
+
+export function CalPop() {
+  useEffect(() => {
+    ;(async function () {
+      const cal = await getCalApi()
+      cal("ui", {
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+      })
+    })()
+  }, [])
+  return (
+    <Button
+      data-cal-link="ytorres-vvcghs/30min"
+      title="Asesorias"
+      styles="bg-[#001959] hover:bg-[#00227A] text-white ml-4 md:ml-7"
+    />
   )
 }
