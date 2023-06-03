@@ -31,7 +31,7 @@ export function CalPop() {
     ;(async function () {
       const cal = await getCalApi()
       cal("ui", {
-        styles: { branding: { brandColor: "#000000" } },
+        styles: { branding: { brandColor: "#001959" } },
         hideEventTypeDetails: false,
       })
     })()

@@ -159,19 +159,19 @@ const preguntas = [
   },
 ]
 
-export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    variableWidth: false,
-    vertical: false,
-  }
+const testimonios = [
+  {
+    video: "/Zoom.jpg",
+  },
+  {
+    video: "/Zoom.jpg",
+  },
+  {
+    video: "/Zoom.jpg",
+  },
+]
 
+export default function Home() {
   const settings3 = {
     dots: true,
     infinite: true,
@@ -248,7 +248,7 @@ export default function Home() {
                       <span className="text-white text-sm">
                         Inicio de Inscripciones
                       </span>
-                      <p className="mt-0 text-white">7 de Junio</p>
+                      <p className="mt-0 text-white">15 de Junio</p>
                     </div>
                   </div>
                 </div>
@@ -301,30 +301,30 @@ export default function Home() {
         </div>
         <div>
           <div className="w-[85%] mx-auto py-16">
-            <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/testimonios.jpg" alt="nose" />
-              <div className="w-full md:w-1/2 md:ml-10 lg:ml-20">
-                <Titulo>Testimonios reales</Titulo>
-                <Line />
-                <Slider {...settings}>
-                  <div className="w-full h-72 rounded-lg overflow-hidden">
-                    <Image
-                      src="/Zoom.jpg"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-cover"
-                    />
+            <Titulo>Testimonios reales</Titulo>
+            <Line />
+            <Slider {...settings3}>
+              {testimonios.map((item, index) => (
+                <div key={index} className="px-4 py-3">
+                  <div className="overflow-hidden rounded-lg">
+                    <div className="w-full h-[14.5rem]">
+                      <Image
+                        src={item.video}
+                        width={1000}
+                        height={1000}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
                   </div>
-                </Slider>
-              </div>
-            </div>
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
         <div className="bg-[#f3f9ff]">
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Universidades y programas</Titulo>
             <Line />
-
             <Slider {...settings3}>
               {universidades.map((item, index) => (
                 <div key={index} className="px-2 py-3">
@@ -389,7 +389,7 @@ export default function Home() {
         <div className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
           <div className="bg-[#001959]/70">
             <div className="w-[85%] mx-auto py-10">
-              <div className="flex flex-col-reverse items-center justify-center md:flex-row">
+              <div className="flex flex-col items-center justify-center md:flex-row">
                 <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
                   <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl m-0">
                     ¿Sueñas con estudiar en Rusia?
