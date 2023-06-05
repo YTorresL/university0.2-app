@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link"
 import {
   Advisor,
   Calendar,
@@ -17,6 +16,7 @@ import Parrafo from "@/components/Paragraph/page"
 import Titulo from "@/components/Title/page"
 import CalOpen, { CalPop } from "@/components/Calendly/page"
 import ImageWidth from "@/components/ImageWidth/page"
+import Link from "next/link"
 
 const beneficios = [
   {
@@ -58,6 +58,37 @@ const beneficios = [
     title: "Comunidad estudiantil",
     description:
       "Conexiones con una red diversa de estudiantes y profesionales.",
+  },
+]
+
+const section = [
+  {
+    name: "Beneficios",
+    path: "#beneficios",
+  },
+  {
+    name: "Idioma",
+    path: "#idioma",
+  },
+  {
+    name: "Testimonios",
+    path: "#testimonios",
+  },
+  {
+    name: "Universidades",
+    path: "#universidades",
+  },
+  {
+    name: "Proceso",
+    path: "#proceso",
+  },
+  {
+    name: "Contacto",
+    path: "#contacto",
+  },
+  {
+    name: "FAQ",
+    path: "#faq",
   },
 ]
 
@@ -209,9 +240,23 @@ export default function Home() {
             height={50}
             className="w-12 md:w-14 lg:w-16"
           />
+          <div className="hidden xl:block">
+            <ul className="flex items-center justify-between">
+              {section.map((item, index) => (
+                <li key={index} className="ml-5">
+                  <Link
+                    href={item.path}
+                    className="hover:text-[#6083D4] transition duration-300 ease-in-out text-gray-800"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="flex items-center">
             <div className="hidden min-[375px]:block">
-              <span className="flex items-center">
+              <span className="flex items-center text-gray-800">
                 <Phone
                   width={100}
                   height={100}
@@ -241,9 +286,9 @@ export default function Home() {
                   un equipo comprometido, te ofrecemos la puerta de entrada a
                   las mejores universidades en Rusia.
                 </p>
-                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/50 w-56 md:w-72 py-2 shadow-lg">
+                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/60 w-56 md:w-72 py-2 shadow-lg">
                   <div className="flex justify-center items-center">
-                    <Calendar fill="#001959" className="h-7 w-7" />
+                    <Calendar fill="#fff" className="h-7 w-7" />
                     <div className="ml-3 md:ml-4">
                       <span className="text-white text-sm">
                         Inicio de Inscripciones
@@ -261,6 +306,7 @@ export default function Home() {
               <div
                 className="flex flex-col items-center hover:shadow-lg rounded-lg py-4 hover:shadow-black/5 transition duration-500 ease-in-out"
                 key={index}
+                id="beneficios"
               >
                 <div className="mb-4">
                   <div className="p-3 bg-white rounded-lg shadow-lg shadow-black/5">
@@ -277,7 +323,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div>
+        <div id="idioma">
           <div className="sm:w-[60%] mx-auto py-16 w-[85%]">
             <div className="text-center">
               <Titulo>¿Estás inquieto acerca del idioma?</Titulo>
@@ -299,7 +345,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
+        <div id="testimonios">
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Testimonios reales</Titulo>
             <Line />
@@ -321,7 +367,7 @@ export default function Home() {
             </Slider>
           </div>
         </div>
-        <div className="bg-[#f3f9ff]">
+        <div className="bg-[#f3f9ff]" id="universidades">
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Universidades y programas</Titulo>
             <Line />
@@ -333,6 +379,7 @@ export default function Home() {
                       <div className="w-full h-64">
                         <Image
                           src={item.imagen}
+                          alt={item.description}
                           width={1000}
                           height={1000}
                           className="object-cover w-full h-full"
@@ -352,7 +399,7 @@ export default function Home() {
             </Slider>
           </div>
         </div>
-        <div>
+        <div id="proceso">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/asesoramiento.jpg" alt="nose" />
@@ -386,7 +433,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
+        <div
+          className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden"
+          id="contacto"
+        >
           <div className="bg-[#001959]/70">
             <div className="w-[85%] mx-auto py-10">
               <div className="flex flex-col items-center justify-center md:flex-row">
@@ -413,7 +463,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
+        <div id="faq">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/Inscripción.jpg" alt="nose" />
@@ -441,70 +491,42 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="bg-white">
-        <div className="mx-auto w-[85%] p-4 py-6 lg:py-20">
-          <div className="grid w-full grid-cols-2 gap-3 sm:gap-8 sm:grid-cols-5 place-content-center">
+      <footer className="bg-[#001959] text-white">
+        <div className="mx-auto w-[85%] p-4 pt-6 lg:pt-20 lg:pb-0">
+          <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8 place-items-center">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={150}
+              height={50}
+              className="w-12 md:w-16 mb-4"
+            />
+            <div></div>
             <div>
-              <Image
-                src="/logo.png"
-                alt="logo"
-                width={150}
-                height={50}
-                className="w-12 mb-4 md:w-16"
-              />
-              <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                © 2023 Marca™. All Rights Reserved.
-              </span>
-            </div>
-            <div>
-              <h2 className="mb-6 text-lg font-bold text-gray-800">
-                Resources
-              </h2>
-              <ul className="text-base text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Blog empresas
+              <h2 className="mb-6 text-lg font-bold">Redes sociales</h2>
+              <ul className="text-base ">
+                <li className="mb-2">
+                  <Link href="#" className="hover:underline">
+                    Twitter
                   </Link>
                 </li>
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Seguridad
+                <li className="mb-2">
+                  <Link href="#" className="hover:underline">
+                    Youtube
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-lg font-bold text-gray-800">
-                Follow us
-              </h2>
-              <ul className="text-base text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Trabaja con nosotros
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Seguridad
-                  </Link>
-                </li>
+              <h2 className="mb-6 text-lg font-bold">Contacto</h2>
+              <ul className="text-base ">
+                <li className="mb-2">+495 95220935</li>
+                <li className="mb-2">noreplay@gmail.com</li>
               </ul>
             </div>
-            <div>
-              <h2 className="mb-6 text-lg font-bold text-gray-800">Legal</h2>
-              <ul className="text-base text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Seguridad
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link href="/" className="hover:underline">
-                    Trabaja con nosotros
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div className="text-center py-10">
+            <span>© 2023 Marca™. All Rights Reserved.</span>
           </div>
         </div>
       </footer>
