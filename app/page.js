@@ -131,32 +131,46 @@ const universidades = [
     imagen: "/sanpetersburgo.jpg",
   },
   {
-    type: "Universidad",
+    type: "Ekaterimburgo",
     title: "Universidad de Kaerov",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/meet.jpg",
+    imagen: "/ekaterimburgo.jpg",
   },
   {
-    type: "Universidad",
+    type: "Kaliningrado",
     title: "Universidad Estatal de Moscú",
     description:
       "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/meet.jpg",
+    imagen: "/kaliningrado.jpg",
   },
   {
-    type: "Universidad",
+    type: "Sochi",
     title: "Universidad de San Petersburgo",
     description:
       "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/meet.jpg",
+    imagen: "/sochi.jpg",
   },
   {
-    type: "Universidad",
+    type: "Krasnodar",
     title: "Universidad de Kaerov",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/meet.jpg",
+  },
+  {
+    type: "Tyumen",
+    title: "Universidad de San Petersburgo",
+    description:
+      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/tyumen.jpg",
+  },
+  {
+    type: "Perm",
+    title: "Universidad de San Petersburgo",
+    description:
+      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/perm.jpg",
   },
 ]
 
