@@ -439,8 +439,15 @@ export default function Home() {
             <Slider {...settings3}>
               {testimonios.map((item, index) => (
                 <div key={index} className="px-4 py-3">
-                  <div className="overflow-hidden rounded-lg">
+                  <div className="overflow-hidden rounded-lg relative">
                     <div className="w-full h-[14.5rem]">
+                      <div className="bg-[#001959]/70 absolute h-full w-full">
+                        <div className="flex items-center justify-center h-full">
+                          <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                            Testimonio
+                          </h1>
+                        </div>
+                      </div>
                       <Image
                         src={item.video}
                         width={1000}
