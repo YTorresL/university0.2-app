@@ -231,30 +231,28 @@ export default function Home() {
 
   if (open) {
     return (
-      <div className="h-full w-full">
-        {open && (
-          <div
-            className={`bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center transition duration-200 ease-in-out ${
-              fadeOut ? "opacity-0" : "opacity-100"
-            }`}
-            onTransitionEnd={() => setFadeOut(false)}
-          >
-            <div className="bg-[#001959]/70">
-              <div className="h-[100vh] w-full flex flex-col justify-center items-center">
-                <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl md:w-[50%] w-[90%] text-center">
-                  ¡Descubre un mundo de oportunidades educativas en Rusia con
-                  Marca!
-                </h1>
-                <button
-                  className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-5"
-                  onClick={handleButtonClick}
-                >
-                  Mas información
-                </button>
-              </div>
+      <div
+        className={`h-full w-full transition duration-200 ease-in-out ${
+          fadeOut ? "opacity-0" : "opacity-100"
+        }`}
+        onTransitionEnd={() => setFadeOut(false)}
+      >
+        <div className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center}">
+          <div className="bg-[#001959]/70">
+            <div className="h-[100vh] w-full flex flex-col justify-center items-center">
+              <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl md:w-[50%] w-[90%] text-center">
+                ¡Descubre un mundo de oportunidades educativas en Rusia con
+                Marca!
+              </h1>
+              <button
+                className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-5"
+                onClick={handleButtonClick}
+              >
+                Mas información
+              </button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     )
   }
