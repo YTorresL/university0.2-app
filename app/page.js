@@ -231,7 +231,7 @@ export default function Home() {
                 Marca!
               </h1>
               <button
-                className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-3"
+                className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-4"
                 onClick={() => setOpen(false)}
               >
                 Mas información
