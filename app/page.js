@@ -237,7 +237,7 @@ export default function Home() {
         }`}
         onTransitionEnd={() => setFadeOut(false)}
       >
-        <div className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center}">
+        <div className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center">
           <div className="bg-[#001959]/70">
             <div className="h-[100vh] w-full flex flex-col justify-center items-center">
               <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl md:w-[50%] w-[90%] text-center">
@@ -548,7 +548,7 @@ export default function Home() {
 
       <footer className="bg-[#001959] text-white">
         <div className="mx-auto w-[85%] p-4 pt-6 lg:pt-20 lg:pb-0">
-          <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8 place-items-center">
+          <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
             <Image
               src="/logo.png"
               alt="logo"
@@ -580,7 +580,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="text-center py-10">
+          <div className="text-center py-5 md:py-10">
             <span>© 2023 Marca™. All Rights Reserved.</span>
           </div>
         </div>
