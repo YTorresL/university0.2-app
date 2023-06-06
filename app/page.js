@@ -226,7 +226,7 @@ export default function Home() {
     setFadeOut(true)
     setTimeout(() => {
       setOpen(false)
-    }, 500) // Tiempo de la transición en milisegundos
+    }, 200)
   }
 
   if (open) {
@@ -234,7 +234,7 @@ export default function Home() {
       <div className="h-full w-full">
         {open && (
           <div
-            className={`bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center transition-opacity ${
+            className={`bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center transition duration-200 ease-in-out ${
               fadeOut ? "opacity-0" : "opacity-100"
             }`}
             onTransitionEnd={() => setFadeOut(false)}
