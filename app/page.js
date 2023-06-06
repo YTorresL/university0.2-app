@@ -222,7 +222,11 @@ export default function Home() {
 
   if (open) {
     return (
-      <div className="h-full w-full">
+      <div
+        className={`h-full w-full ${
+          open ? "" : "opacity-0 transition duration-500 ease-in-out"
+        }`}
+      >
         <div className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center">
           <div className="bg-[#001959]/70">
             <div className="h-[100vh] w-full flex flex-col justify-center items-center">
@@ -231,7 +235,7 @@ export default function Home() {
                 Marca!
               </h1>
               <button
-                className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-4"
+                className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-5"
                 onClick={() => setOpen(false)}
               >
                 Mas información
