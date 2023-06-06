@@ -208,13 +208,13 @@ const preguntas = [
 
 const testimonios = [
   {
-    video: "/Zoom.jpg",
+    video: "/test1.png",
   },
   {
-    video: "/Zoom.jpg",
+    video: "/test2.png",
   },
   {
-    video: "/Zoom.jpg",
+    video: "/test3.png",
   },
 ]
 
