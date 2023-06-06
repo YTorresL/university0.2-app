@@ -18,6 +18,7 @@ import CalOpen, { CalPop } from "@/components/Calendly/page"
 import ImageWidth from "@/components/ImageWidth/page"
 import Link from "next/link"
 import { useState } from "react"
+import { useSpring, animated } from "@react-spring/web"
 
 const beneficios = [
   {
@@ -71,13 +72,14 @@ const section = [
     name: "Idioma",
     path: "#idioma",
   },
-  {
-    name: "Testimonios",
-    path: "#testimonios",
-  },
+
   {
     name: "Universidades",
     path: "#universidades",
+  },
+  {
+    name: "Testimonios",
+    path: "#testimonios",
   },
   {
     name: "Proceso",
@@ -220,10 +222,19 @@ const testimonios = [
 export default function Home() {
   const [open, setOpen] = useState(true)
 
+  const fadeOut = useSpring({
+    from: { opacty: 1 },
+    to: { opacty: 0 },
+    config: { duration: 500 },
+  })
+
   if (open) {
     return (
-      <div className={`h-full w-full ${open ? "" : "fade-out"}`}>
-        <div className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center">
+      <div className="h-full w-full">
+        <animated.div
+          className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center"
+          style={fadeOut}
+        >
           <div className="bg-[#001959]/70">
             <div className="h-[100vh] w-full flex flex-col justify-center items-center">
               <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl md:w-[50%] w-[90%] text-center">
@@ -238,7 +249,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </div>
+        </animated.div>
       </div>
     )
   }
@@ -385,28 +396,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="testimonios">
-          <div className="w-[85%] mx-auto py-16">
-            <Titulo>Testimonios reales</Titulo>
-            <Line />
-            <Slider {...settings3}>
-              {testimonios.map((item, index) => (
-                <div key={index} className="px-4 py-3">
-                  <div className="overflow-hidden rounded-lg">
-                    <div className="w-full h-[14.5rem]">
-                      <Image
-                        src={item.video}
-                        width={1000}
-                        height={1000}
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
+
         <div className="bg-[#f3f9ff]" id="universidades">
           <div className="w-[85%] mx-auto py-16">
             <Titulo>Universidades y programas</Titulo>
@@ -432,6 +422,28 @@ export default function Home() {
                         </h3>
                         <Parrafo>{item.description}</Parrafo>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+        <div id="testimonios">
+          <div className="w-[85%] mx-auto py-16">
+            <Titulo>Testimonios reales</Titulo>
+            <Line />
+            <Slider {...settings3}>
+              {testimonios.map((item, index) => (
+                <div key={index} className="px-4 py-3">
+                  <div className="overflow-hidden rounded-lg">
+                    <div className="w-full h-[14.5rem]">
+                      <Image
+                        src={item.video}
+                        width={1000}
+                        height={1000}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                   </div>
                 </div>

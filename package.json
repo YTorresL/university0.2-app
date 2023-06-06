@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@calcom/embed-react": "1.1.1",
+    "@react-spring/web": "^9.7.2",
     "eslint-config-next": "13.4.3",
     "next": "13.4.3",
     "normalize.css": "8.0.1",
