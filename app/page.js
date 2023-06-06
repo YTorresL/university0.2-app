@@ -226,7 +226,7 @@ export default function Home() {
         <div className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center">
           <div className="bg-[#001959]/70">
             <div className="h-[100vh] w-full flex flex-col justify-center items-center">
-              <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl w-[50%] text-center">
+              <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl md:w-[50%] w-[90%] text-center">
                 ¡Descubre un mundo de oportunidades educativas en Rusia con
                 Marca!
               </h1>
