@@ -18,6 +18,8 @@ import CalOpen, { CalPop } from "@/components/Calendly/page"
 import ImageWidth from "@/components/ImageWidth/page"
 import Link from "next/link"
 import { useState } from "react"
+import { Link as ReactLink } from "react-scroll"
+import OpacityAnimation from "@/components/OpacityAnimation/page"
 
 const beneficios = [
   {
@@ -65,32 +67,32 @@ const beneficios = [
 const section = [
   {
     name: "Beneficios",
-    path: "#beneficios",
+    path: "beneficios",
   },
   {
     name: "Idioma",
-    path: "#idioma",
+    path: "idioma",
   },
 
   {
     name: "Universidades",
-    path: "#universidades",
+    path: "universidades",
   },
   {
     name: "Testimonios",
-    path: "#testimonios",
+    path: "testimonios",
   },
   {
     name: "Proceso",
-    path: "#proceso",
+    path: "proceso",
   },
   {
     name: "Contacto",
-    path: "#contacto",
+    path: "contacto",
   },
   {
     name: "FAQ",
-    path: "#faq",
+    path: "faq",
   },
 ]
 
@@ -298,12 +300,16 @@ export default function Home() {
             <ul className="flex items-center justify-between">
               {section.map((item, index) => (
                 <li key={index} className="ml-5">
-                  <Link
-                    href={item.path}
+                  <ReactLink
+                    activeClass="active"
+                    to={item.path}
+                    spy={true}
+                    smooth={true}
+                    duration={250 * (index + 1)}
                     className="hover:text-[#6083D4] transition duration-300 ease-linear text-gray-800"
                   >
                     {item.name}
-                  </Link>
+                  </ReactLink>
                 </li>
               ))}
             </ul>
@@ -354,114 +360,122 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
-            {beneficios.map((item, index) => (
-              <div
-                className="flex flex-col items-center hover:shadow-lg rounded-lg py-4 hover:shadow-black/5 transition duration-500 ease-in-out"
-                key={index}
-                id="beneficios"
-              >
-                <div className="mb-4">
-                  <div className="p-3 bg-white rounded-lg shadow-lg shadow-black/5">
-                    {item.icon}
+          <OpacityAnimation>
+            <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
+              {beneficios.map((item, index) => (
+                <div
+                  className="flex flex-col items-center hover:shadow-lg rounded-lg py-4 hover:shadow-black/5 transition duration-500 ease-in-out"
+                  key={index}
+                  name="beneficios"
+                >
+                  <div className="mb-4">
+                    <div className="p-3 bg-white rounded-lg shadow-lg shadow-black/5">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 gap-1 mx-2 text-center">
+                    <h1 className="my-0 text-lg font-bold leading-6 text-[#001959]">
+                      {item.title}
+                    </h1>
+                    <p className="text-sm text-gray-500">{item.description}</p>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 gap-1 mx-2 text-center">
-                  <h1 className="my-0 text-lg font-bold leading-6 text-[#001959]">
-                    {item.title}
-                  </h1>
-                  <p className="text-sm text-gray-500">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </OpacityAnimation>
         </div>
-        <div id="idioma">
+        <div name="idioma">
           <div className="sm:w-[60%] mx-auto py-16 w-[85%]">
             <div className="text-center">
-              <Titulo>¿Estás inquieto acerca del idioma?</Titulo>
-              <Line center="yes" />
-              <Parrafo>
-                En el ámbito educativo de Rusia, se encuentran disponibles las
-                facultades preparatorias diseñadas especialmente para
-                estudiantes internacionales de distintos países. Estas
-                facultades ofrecen cursos universitarios en grupos que abordan
-                disciplinas relacionadas con las especialidades elegidas.
-              </Parrafo>
-              <div className="mt-3"></div>
-              <Parrafo>
-                Durante el primer año, conocido como
-                {` "`}preuniversitario{`"`}, tendrás la oportunidad de aprender
-                el idioma ruso desde los fundamentos y también recibirás
-                nivelación académica para prepararte de manera adecuada.
-              </Parrafo>
+              <OpacityAnimation>
+                <Titulo>¿Estás inquieto acerca del idioma?</Titulo>
+                <Line center="yes" />
+                <Parrafo>
+                  En el ámbito educativo de Rusia, se encuentran disponibles las
+                  facultades preparatorias diseñadas especialmente para
+                  estudiantes internacionales de distintos países. Estas
+                  facultades ofrecen cursos universitarios en grupos que abordan
+                  disciplinas relacionadas con las especialidades elegidas.
+                </Parrafo>
+                <div className="mt-3"></div>
+                <Parrafo>
+                  Durante el primer año, conocido como
+                  {` "`}preuniversitario{`"`}, tendrás la oportunidad de
+                  aprender el idioma ruso desde los fundamentos y también
+                  recibirás nivelación académica para prepararte de manera
+                  adecuada.
+                </Parrafo>
+              </OpacityAnimation>
             </div>
           </div>
         </div>
 
-        <div className="bg-[#f3f9ff]" id="universidades">
+        <div className="bg-[#f3f9ff]" name="universidades">
+          <OpacityAnimation>
+            <div className="w-[85%] mx-auto py-16">
+              <Titulo>Universidades y programas</Titulo>
+              <Line />
+              <Slider {...settings3}>
+                {universidades.map((item, index) => (
+                  <div key={index} className="px-2 py-3">
+                    <div className="overflow-hidden bg-white rounded-lg transform hover:-translate-y-3 transition duration-500 ease-in-out hover:shadow-lg hover:shadow-black/5">
+                      <div>
+                        <div className="w-full h-64">
+                          <Image
+                            src={item.imagen}
+                            alt={item.description}
+                            width={1000}
+                            height={1000}
+                            className="object-cover w-full h-full"
+                          />
+                        </div>
+                        <div className="m-5">
+                          <p className="text-sm text-gray-400">{item.type}</p>
+                          <h3 className="my-1 text-base font-bold leading-5 text-[#001959]">
+                            {item.title}
+                          </h3>
+                          <Parrafo>{item.description}</Parrafo>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </OpacityAnimation>
+        </div>
+        <div name="testimonios">
           <div className="w-[85%] mx-auto py-16">
-            <Titulo>Universidades y programas</Titulo>
-            <Line />
-            <Slider {...settings3}>
-              {universidades.map((item, index) => (
-                <div key={index} className="px-2 py-3">
-                  <div className="overflow-hidden bg-white rounded-lg transform hover:-translate-y-3 transition duration-500 ease-in-out hover:shadow-lg hover:shadow-black/5">
-                    <div>
-                      <div className="w-full h-64">
+            <OpacityAnimation>
+              <Titulo>Testimonios reales</Titulo>
+              <Line />
+              <Slider {...settings3}>
+                {testimonios.map((item, index) => (
+                  <div key={index} className="px-4 py-3">
+                    <div className="overflow-hidden rounded-lg relative">
+                      <div className="w-full h-[14.5rem]">
+                        <div className="bg-[#001959]/70 absolute h-full w-full">
+                          <div className="flex items-center justify-center h-full">
+                            <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                              Testimonio
+                            </h1>
+                          </div>
+                        </div>
                         <Image
-                          src={item.imagen}
-                          alt={item.description}
+                          src={item.video}
                           width={1000}
                           height={1000}
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      <div className="m-5">
-                        <p className="text-sm text-gray-400">{item.type}</p>
-                        <h3 className="my-1 text-base font-bold leading-5 text-[#001959]">
-                          {item.title}
-                        </h3>
-                        <Parrafo>{item.description}</Parrafo>
-                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </Slider>
+                ))}
+              </Slider>
+            </OpacityAnimation>
           </div>
         </div>
-        <div id="testimonios">
-          <div className="w-[85%] mx-auto py-16">
-            <Titulo>Testimonios reales</Titulo>
-            <Line />
-            <Slider {...settings3}>
-              {testimonios.map((item, index) => (
-                <div key={index} className="px-4 py-3">
-                  <div className="overflow-hidden rounded-lg relative">
-                    <div className="w-full h-[14.5rem]">
-                      <div className="bg-[#001959]/70 absolute h-full w-full">
-                        <div className="flex items-center justify-center h-full">
-                          <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
-                            Testimonio
-                          </h1>
-                        </div>
-                      </div>
-                      <Image
-                        src={item.video}
-                        width={1000}
-                        height={1000}
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-        <div id="proceso">
+        <div name="proceso">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/asesoramiento.jpg" alt="nose" />
@@ -475,21 +489,23 @@ export default function Home() {
                   académicos con nosotros!
                 </Parrafo>
                 <ul className="mt-8">
-                  {proceso.map((item, index) => (
-                    <li className="flex my-3 leading-6" key={index}>
-                      <div>
-                        <div className="px-4 py-2 mr-5 font-bold text-white bg-[#001959] rounded-full">
-                          {index + 1}
+                  <OpacityAnimation>
+                    {proceso.map((item, index) => (
+                      <li className="flex my-3 leading-6" key={index}>
+                        <div>
+                          <div className="px-4 py-2 mr-5 font-bold text-white bg-[#001959] rounded-full">
+                            {index + 1}
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex flex-col">
-                        <h1 className="my-0 text-lg font-bold text-[#001959]">
-                          {item.title}
-                        </h1>
-                        <Parrafo>{item.description}</Parrafo>
-                      </div>
-                    </li>
-                  ))}
+                        <div className="flex flex-col">
+                          <h1 className="my-0 text-lg font-bold text-[#001959]">
+                            {item.title}
+                          </h1>
+                          <Parrafo>{item.description}</Parrafo>
+                        </div>
+                      </li>
+                    ))}
+                  </OpacityAnimation>
                 </ul>
               </div>
             </div>
@@ -497,35 +513,37 @@ export default function Home() {
         </div>
         <div
           className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden"
-          id="contacto"
+          name="contacto"
         >
           <div className="bg-[#001959]/70">
             <div className="w-[85%] mx-auto py-10">
-              <div className="flex flex-col items-center justify-center md:flex-row">
-                <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl m-0">
-                    ¿Sueñas con estudiar en Rusia?
-                  </h1>
-                  <p className="mt-3 text-white">
-                    ¡Hazlo realidad con nuestro asesoramiento experto! Te
-                    guiaremos en el proceso de planificación, trámites y
-                    selección de universidades. Obtén información confiable y
-                    precisa sobre visas, programas de estudio y más.
-                  </p>
-                  <p className="mt-3 text-white">
-                    ¡Contáctanos hoy mismo para comenzar tu aventura educativa
-                    en Rusia! Haz clic aquí para solicitar tu asesoramiento
-                    personalizado.
-                  </p>
+              <OpacityAnimation>
+                <div className="flex flex-col items-center justify-center md:flex-row">
+                  <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
+                    <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl m-0">
+                      ¿Sueñas con estudiar en Rusia?
+                    </h1>
+                    <p className="mt-3 text-white">
+                      ¡Hazlo realidad con nuestro asesoramiento experto! Te
+                      guiaremos en el proceso de planificación, trámites y
+                      selección de universidades. Obtén información confiable y
+                      precisa sobre visas, programas de estudio y más.
+                    </p>
+                    <p className="mt-3 text-white">
+                      ¡Contáctanos hoy mismo para comenzar tu aventura educativa
+                      en Rusia! Haz clic aquí para solicitar tu asesoramiento
+                      personalizado.
+                    </p>
+                  </div>
+                  <div className="my-6">
+                    <CalOpen />
+                  </div>
                 </div>
-                <div className="my-6">
-                  <CalOpen />
-                </div>
-              </div>
+              </OpacityAnimation>
             </div>
           </div>
         </div>
-        <div id="faq">
+        <div name="faq">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/Inscripción.jpg" alt="nose" />
@@ -538,14 +556,16 @@ export default function Home() {
                   frecuentes.
                 </Parrafo>
                 {preguntas.map((item, index) => (
-                  <details className="mt-1" key={index}>
-                    <summary className="flex leading-6 text-[#001959] border-b border-[#001959] p-2">
-                      {item.title}
-                    </summary>
-                    <div className="m-3">
-                      <Parrafo>{item.description}</Parrafo>
-                    </div>
-                  </details>
+                  <OpacityAnimation key={index}>
+                    <details className="mt-1">
+                      <summary className="flex leading-6 text-[#001959] border-b border-[#001959] p-2">
+                        {item.title}
+                      </summary>
+                      <div className="m-3">
+                        <Parrafo>{item.description}</Parrafo>
+                      </div>
+                    </details>
+                  </OpacityAnimation>
                 ))}
               </div>
             </div>
