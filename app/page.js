@@ -25,7 +25,7 @@ import Modal from "@/components/Modal/page"
 const beneficios = [
   {
     icon: (
-      <Custom width={100} height={100} className="w-10 h-10" fill="#6083D4" />
+      <Custom width={100} height={100} className="w-10 h-10" fill="#001959" />
     ),
     title: "Experiencia personalizada",
     description: "Asesores con amplio conocimiento del sistema educativo ruso.",
@@ -36,7 +36,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#6083D4"
+        fill="#001959"
       />
     ),
     title: "Universidades de prestigio",
@@ -44,7 +44,7 @@ const beneficios = [
   },
   {
     icon: (
-      <Advisor width={100} height={100} className="w-10 h-10" fill="#6083D4" />
+      <Advisor width={100} height={100} className="w-10 h-10" fill="#001959" />
     ),
     title: "Asesoría integral",
     description: "Apoyo personalizado en cada etapa del proceso educativo.",
@@ -56,7 +56,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#6083D4"
+        fill="#001959"
       />
     ),
     title: "Comunidad estudiantil",
@@ -379,7 +379,7 @@ export default function Home() {
                   name="beneficios"
                 >
                   <div className="mb-4">
-                    <div className="p-3 bg-white rounded-lg shadow-lg shadow-black/5">
+                    <div className="p-3 bg-[#6083D4] rounded-lg shadow-lg shadow-black/5">
                       {item.icon}
                     </div>
                   </div>
