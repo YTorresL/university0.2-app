@@ -20,6 +20,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Link as ReactLink } from "react-scroll"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
+import Modal from "@/components/Modal/page"
 
 const beneficios = [
   {
@@ -223,6 +224,15 @@ const testimonios = [
 export default function Home() {
   const [open, setOpen] = useState(true)
   const [fadeOut, setFadeOut] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+  }
 
   const handleButtonClick = () => {
     setFadeOut(true)
@@ -234,7 +244,7 @@ export default function Home() {
   if (open) {
     return (
       <div
-        className={`h-full w-full transition duration-200 ease-in-out ${
+        className={`bg-transparent h-full w-full transition duration-200 ease-in-out ${
           fadeOut ? "opacity-0" : "opacity-100"
         }`}
         onTransitionEnd={() => setFadeOut(false)}
@@ -332,7 +342,7 @@ export default function Home() {
       </header>
       <main>
         <div className="w-[85%] mx-auto">
-          <div className="bg-[url('/banner.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
+          <div className="bg-[url('/6.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
             <div className="w-full h-full bg-gradient-to-r from-[#001959] to-transparent">
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
@@ -441,6 +451,15 @@ export default function Home() {
                   </div>
                 ))}
               </Slider>
+              <div className="mt-10 flex justify-center">
+                <button
+                  onClick={handleOpenModal}
+                  className="py-2 px-4 rounded-lg bg-[#001959] hover:bg-[#00227A] text-white"
+                >
+                  Mas información
+                </button>
+                <Modal isOpen={isModalOpen} onClose={handleCloseModal}></Modal>
+              </div>
             </div>
           </OpacityAnimation>
         </div>
