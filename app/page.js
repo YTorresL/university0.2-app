@@ -25,7 +25,7 @@ import Modal from "@/components/Modal/page"
 const beneficios = [
   {
     icon: (
-      <Custom width={100} height={100} className="w-10 h-10" fill="#001959" />
+      <Custom width={100} height={100} className="w-10 h-10" fill="#6083D4" />
     ),
     title: "Experiencia personalizada",
     description: "Asesores con amplio conocimiento del sistema educativo ruso.",
@@ -36,7 +36,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#001959"
+        fill="#6083D4"
       />
     ),
     title: "Universidades de prestigio",
@@ -44,7 +44,7 @@ const beneficios = [
   },
   {
     icon: (
-      <Advisor width={100} height={100} className="w-10 h-10" fill="#001959" />
+      <Advisor width={100} height={100} className="w-10 h-10" fill="#6083D4" />
     ),
     title: "Asesoría integral",
     description: "Apoyo personalizado en cada etapa del proceso educativo.",
@@ -56,7 +56,7 @@ const beneficios = [
         width={100}
         height={100}
         className="w-10 h-10"
-        fill="#001959"
+        fill="#6083D4"
       />
     ),
     title: "Comunidad estudiantil",
@@ -512,7 +512,7 @@ export default function Home() {
                     {proceso.map((item, index) => (
                       <li className="flex my-3 leading-6" key={index}>
                         <div>
-                          <div className="px-4 py-2 mr-5 font-bold text-white bg-[#001959] rounded-full">
+                          <div className="px-4 py-2 mr-5 font-bold text-white bg-[#6083D4] rounded-full">
                             {index + 1}
                           </div>
                         </div>
