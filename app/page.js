@@ -374,12 +374,12 @@ export default function Home() {
             <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
               {beneficios.map((item, index) => (
                 <div
-                  className="flex flex-col items-center hover:shadow-lg rounded-lg py-4 hover:shadow-black/5 transition duration-500 ease-in-out"
+                  className="flex flex-col items-center hover:shadow-lg rounded-lg py-4 hover:shadow-black/5 bg-[#6083D4] transition duration-500 ease-in-out"
                   key={index}
                   name="beneficios"
                 >
                   <div className="mb-4">
-                    <div className="p-3 bg-[#6083D4] rounded-lg shadow-lg shadow-black/5">
+                    <div className="p-3 bg-white rounded-lg shadow-lg shadow-black/5">
                       {item.icon}
                     </div>
                   </div>
