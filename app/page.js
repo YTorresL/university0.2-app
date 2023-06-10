@@ -356,7 +356,7 @@ export default function Home() {
                   un equipo comprometido, te ofrecemos la puerta de entrada a
                   las mejores universidades en Rusia.
                 </p>
-                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/60 w-56 md:w-72 py-2 shadow-lg">
+                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/60 hover:bg-[#6083D4]/80 transition duration-500 ease-in-out w-56 md:w-72 py-2 shadow-lg">
                   <div className="flex justify-center items-center">
                     <Calendar fill="#fff" className="h-7 w-7" />
                     <div className="ml-3 md:ml-4">
@@ -371,10 +371,10 @@ export default function Home() {
             </div>
           </div>
           <OpacityAnimation>
-            <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-4 my-10 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-5 my-10 xl:grid-cols-4">
               {beneficios.map((item, index) => (
                 <div
-                  className="flex flex-col items-center hover:shadow-lg rounded-lg py-4 hover:shadow-black/5 bg-[#f3f9ff] transition duration-500 ease-in-out"
+                  className="flex w-full flex-col items-center hover:shadow-lg rounded-lg py-4 bg-[#f3f9ff] hover:scale-105 transition duration-500 ease-in-out"
                   key={index}
                   name="beneficios"
                 >
@@ -383,7 +383,7 @@ export default function Home() {
                       {item.icon}
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 gap-1 mx-2 text-center">
+                  <div className="grid grid-cols-1 gap-1 mx-5 xl:mx-3 text-center">
                     <h1 className="my-0 text-lg font-bold leading-6 text-[#001959]">
                       {item.title}
                     </h1>
@@ -399,7 +399,7 @@ export default function Home() {
             <div className="text-center">
               <OpacityAnimation>
                 <Titulo>¿Estás inquieto acerca del idioma?</Titulo>
-                <Line center="yes" />
+                <Line center />
                 <Parrafo>
                   En el ámbito educativo de Rusia, se encuentran disponibles las
                   facultades preparatorias diseñadas especialmente para
@@ -427,8 +427,8 @@ export default function Home() {
               <Line />
               <Slider {...settings3}>
                 {universidades.map((item, index) => (
-                  <div key={index} className="px-2 py-3">
-                    <div className="overflow-hidden bg-white rounded-lg transform hover:-translate-y-3 transition duration-500 ease-in-out hover:shadow-lg hover:shadow-black/5">
+                  <div key={index} className="px-3 py-8">
+                    <div className="overflow-hidden bg-white rounded-lg transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
                       <div>
                         <div className="w-full h-64">
                           <Image
@@ -454,7 +454,7 @@ export default function Home() {
               <div className="mt-10 flex justify-center">
                 <button
                   onClick={handleOpenModal}
-                  className="py-2 px-4 rounded-lg bg-[#001959] hover:bg-[#00227A] text-white"
+                  className="py-2 px-4 rounded-lg bg-[#001959] transition duration-500 ease-in-out hover:bg-[#00227A] text-white"
                 >
                   Mas información
                 </button>
@@ -470,8 +470,8 @@ export default function Home() {
               <Line />
               <Slider {...settings3}>
                 {testimonios.map((item, index) => (
-                  <div key={index} className="px-4 py-3">
-                    <div className="overflow-hidden rounded-lg relative">
+                  <div key={index} className="px-4 py-5">
+                    <div className="overflow-hidden rounded-lg relative hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
                       <div className="w-full h-[14.5rem]">
                         <div className="bg-[#001959]/70 absolute h-full w-full">
                           <div className="flex items-center justify-center h-full">
@@ -512,12 +512,12 @@ export default function Home() {
                     {proceso.map((item, index) => (
                       <li className="flex my-3 leading-6" key={index}>
                         <div>
-                          <div className="px-4 py-2 mr-5 font-bold text-white bg-[#6083D4] rounded-full">
+                          <div className="px-4 py-2 mr-5 font-bold text-white bg-[#6083D4] hover:bg-[#001959] transition duration-500 ease-in-out rounded-full">
                             {index + 1}
                           </div>
                         </div>
                         <div className="flex flex-col">
-                          <h1 className="my-0 text-lg font-bold text-[#001959]">
+                          <h1 className="my-0 text-lg font-semibold text-[#001959]">
                             {item.title}
                           </h1>
                           <Parrafo>{item.description}</Parrafo>
@@ -577,7 +577,7 @@ export default function Home() {
                 {preguntas.map((item, index) => (
                   <OpacityAnimation key={index}>
                     <details className="mt-1">
-                      <summary className="flex leading-6 text-[#001959] border-b border-[#001959] p-2">
+                      <summary className="flex leading-6 text-[#001959] border-b border-[#001959] p-2 font-semibold">
                         {item.title}
                       </summary>
                       <div className="m-3">
