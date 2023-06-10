@@ -454,7 +454,7 @@ export default function Home() {
               <div className="mt-10 flex justify-center">
                 <button
                   onClick={handleOpenModal}
-                  className="py-2 px-4 rounded-lg bg-[#001959] transition duration-500 ease-in-out hover:bg-[#00227A] text-white"
+                  className="py-2 px-4 rounded-lg bg-[#001959] transition duration-500 ease-in-out hover:bg-[#012b94] text-white"
                 >
                   Mas información
                 </button>
