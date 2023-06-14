@@ -157,13 +157,6 @@ const universidades = [
     imagen: "/sochi.jpg",
   },
   {
-    type: "Krasnodar",
-    title: "Universidad de Kaerov",
-    description:
-      "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/meet.jpg",
-  },
-  {
     type: "Tyumen",
     title: "Universidad de San Petersburgo",
     description:
@@ -254,7 +247,7 @@ export default function Home() {
             <div className="h-[100vh] w-full flex flex-col justify-center items-center">
               <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl md:w-[50%] w-[90%] text-center">
                 ¡Descubre un mundo de oportunidades educativas en Rusia con
-                Marca!
+                Privet!
               </h1>
               <button
                 className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-5"
@@ -347,10 +340,10 @@ export default function Home() {
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
                   ¡Descubre un mundo de oportunidades educativas en Rusia con
-                  Marca!
+                  Privet!
                 </h1>
                 <p className="mt-5 leading-5 text-white">
-                  En Marca, nos apasiona brindar igualdad de oportunidades a
+                  En Privet, nos apasiona brindar igualdad de oportunidades a
                   estudiantes latinoamericanos que buscan una educación de
                   calidad a nivel mundial. Con nuestra asesoría especializada y
                   un equipo comprometido, te ofrecemos la puerta de entrada a
@@ -503,7 +496,7 @@ export default function Home() {
                 <Line />
 
                 <Parrafo>
-                  En Marca, te brindamos asesoría profesional y seguridad en
+                  En Privet, te brindamos asesoría profesional y seguridad en
                   cada paso del proceso de admisión. ¡Cumple tus sueños
                   académicos con nosotros!
                 </Parrafo>
@@ -627,7 +620,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center py-5 md:py-10">
-            <span>© 2023 Marca™. All Rights Reserved.</span>
+            <span>© 2023 Privet™. All Rights Reserved.</span>
           </div>
         </div>
       </footer>
