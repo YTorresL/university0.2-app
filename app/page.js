@@ -120,55 +120,36 @@ const proceso = [
   },
 ]
 
-const universidades = [
+const programas = [
   {
-    type: "Moscú",
-    title: "Universidad Estatal de Moscú",
+    title: "Carreras",
     description:
       "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/moscu.jpg",
   },
   {
-    type: "San Petersburgo",
-    title: "Universidad de San Petersburgo",
+    title: "programas",
     description:
       "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/sanpetersburgo.jpg",
   },
   {
-    type: "Ekaterimburgo",
-    title: "Universidad de Kaerov",
+    title: "Maestrías",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/ekaterimburgo.jpg",
   },
   {
-    type: "Kaliningrado",
-    title: "Universidad Estatal de Moscú",
+    title: "Curso de ruso",
     description:
-      "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/kaliningrado.jpg",
+      "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/ekaterimburgo.jpg",
   },
   {
-    type: "Sochi",
-    title: "Universidad de San Petersburgo",
+    title: "Certificación",
     description:
-      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/sochi.jpg",
-  },
-  {
-    type: "Tyumen",
-    title: "Universidad de San Petersburgo",
-    description:
-      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/tyumen.jpg",
-  },
-  {
-    type: "Perm",
-    title: "Universidad de San Petersburgo",
-    description:
-      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/perm.jpg",
+      "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
+    imagen: "/ekaterimburgo.jpg",
   },
 ]
 
@@ -261,6 +242,15 @@ export default function Home() {
       </div>
     )
   }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  }
 
   const settings3 = {
     dots: true,
@@ -268,6 +258,8 @@ export default function Home() {
     speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1024,
@@ -335,8 +327,13 @@ export default function Home() {
       </header>
       <main>
         <div className="w-[85%] mx-auto">
-          <div className="bg-[url('/6.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-r from-[#001959] to-transparent">
+          <div className="relative">
+            <Slider {...settings}>
+              <div className="bg-[url('/6.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
+                <div className="w-full h-full bg-gradient-to-r from-[#001959] to-transparent"></div>
+              </div>
+            </Slider>
+            <div className="absolute top-0 bottom-0 right-0 left-0">
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
                   ¡Descubre un mundo de oportunidades educativas en Rusia con
@@ -419,11 +416,18 @@ export default function Home() {
               <Titulo>Universidades y programas</Titulo>
               <Line />
               <Slider {...settings3}>
-                {universidades.map((item, index) => (
-                  <div key={index} className="px-3 py-8">
-                    <div className="overflow-hidden bg-white rounded-lg transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
+                {programas.map((item, index) => (
+                  <Link href={"#"} key={index} className="px-4 py-6 relative">
+                    <div className="overflow-hidden rounded-lg transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
+                      <div className="bg-[#001959]/30 absolute h-full w-full">
+                        <div className="flex items-center justify-center h-full">
+                          <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                            {item.title}
+                          </h1>
+                        </div>
+                      </div>
                       <div>
-                        <div className="w-full h-64">
+                        <div className="w-full h-96">
                           <Image
                             src={item.imagen}
                             alt={item.description}
@@ -432,16 +436,9 @@ export default function Home() {
                             className="object-cover w-full h-full"
                           />
                         </div>
-                        <div className="m-5">
-                          <p className="text-sm text-gray-400">{item.type}</p>
-                          <h3 className="my-1 text-base font-bold leading-5 text-[#001959]">
-                            {item.title}
-                          </h3>
-                          <Parrafo>{item.description}</Parrafo>
-                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </Slider>
               <div className="mt-10 flex justify-center">
@@ -593,7 +590,7 @@ export default function Home() {
               alt="logo"
               width={500}
               height={500}
-              className="w-24 md:w-28 lg:w-32 mb-4"
+              className="w-28 md:w-32 lg:w-40 mb-4"
             />
             <div></div>
             <div>
