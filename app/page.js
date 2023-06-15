@@ -293,11 +293,11 @@ export default function Home() {
       <header className="h-24 w-[85%] mx-auto">
         <div className="flex items-center justify-between h-full">
           <Image
-            src="/logo.png"
+            src="/privet.png"
             alt="logo"
             width={150}
             height={50}
-            className="w-24 md:w-28 lg:w-32"
+            className="w-10 md:w-14 lg:w-16"
           />
           <div className="hidden xl:block">
             <ul className="flex items-center justify-between">
@@ -591,9 +591,9 @@ export default function Home() {
             <Image
               src="/logo.png"
               alt="logo"
-              width={150}
-              height={50}
-              className="w-12 md:w-16 mb-4"
+              width={500}
+              height={500}
+              className="w-24 md:w-28 lg:w-32 mb-4"
             />
             <div></div>
             <div>
