@@ -459,7 +459,7 @@ export default function Home() {
         <div name="testimonios">
           <div className="w-[85%] mx-auto py-16">
             <OpacityAnimation>
-              <Titulo>Testimonios reales</Titulo>
+              <Titulo>Turismo</Titulo>
               <Line />
               <Slider {...settings3}>
                 {testimonios.map((item, index) => (
