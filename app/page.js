@@ -297,7 +297,7 @@ export default function Home() {
             alt="logo"
             width={150}
             height={50}
-            className="w-12 md:w-16 lg:w-24"
+            className="w-12 md:w-16 lg:w-28"
           />
           <div className="hidden xl:block">
             <ul className="flex items-center justify-between">
