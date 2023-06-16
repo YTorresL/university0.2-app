@@ -122,30 +122,35 @@ const proceso = [
 
 const programas = [
   {
+    index: 0,
     title: "Carreras",
     description:
       "La Universidad Estatal de Moscú es una universidad pública de investigación ubicada en Moscú, Rusia. Fundada en 1755 por Mijaíl Lomonósov, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/moscu.jpg",
   },
   {
-    title: "programas",
+    index: 1,
+    title: "Programas",
     description:
       "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/sanpetersburgo.jpg",
   },
   {
+    index: 2,
     title: "Maestrías",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/ekaterimburgo.jpg",
   },
   {
+    index: 3,
     title: "Curso de ruso",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/ekaterimburgo.jpg",
   },
   {
+    index: 4,
     title: "Certificación",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
@@ -198,14 +203,14 @@ const testimonios = [
 export default function Home() {
   const [open, setOpen] = useState(true)
   const [fadeOut, setFadeOut] = useState(false)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedProgram, setSelectedProgram] = useState(null)
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true)
+  const handleProgramClick = (index) => {
+    setSelectedProgram(programas[index])
   }
 
   const handleCloseModal = () => {
-    setIsModalOpen(false)
+    setSelectedProgram(null)
   }
 
   const handleButtonClick = () => {
@@ -417,7 +422,11 @@ export default function Home() {
               <Line />
               <Slider {...settings3}>
                 {programas.map((item, index) => (
-                  <Link href={"#"} key={index} className="px-4 py-6 relative">
+                  <div
+                    key={index}
+                    className="px-4 py-6 relative pointer-events-auto"
+                    onClick={() => handleProgramClick(index)}
+                  >
                     <div className="overflow-hidden rounded-lg transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
                       <div className="bg-[#001959]/30 absolute h-full w-full">
                         <div className="flex items-center justify-center h-full">
@@ -438,18 +447,14 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </Slider>
-              <div className="mt-10 flex justify-center">
-                <button
-                  onClick={handleOpenModal}
-                  className="py-2 px-4 rounded-lg bg-[#001959] transition duration-500 ease-in-out hover:bg-[#012b94] text-white"
-                >
-                  Mas información
-                </button>
-                <Modal isOpen={isModalOpen} onClose={handleCloseModal}></Modal>
-              </div>
+              {selectedProgram && (
+                <Modal isOpen={!!selectedProgram} onClose={handleCloseModal}>
+                  {selectedProgram.title}
+                </Modal>
+              )}
             </div>
           </OpacityAnimation>
         </div>
@@ -472,6 +477,7 @@ export default function Home() {
                         </div>
                         <Image
                           src={item.video}
+                          alt={`${item.description}`}
                           width={1000}
                           height={1000}
                           className="object-cover w-full h-full"
