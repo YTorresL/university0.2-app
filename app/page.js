@@ -1,99 +1,41 @@
 "use client"
 import Image from "next/image"
-import {
-  Advisor,
-  Calendar,
-  Community,
-  Custom,
-  Phone,
-  University,
-} from "@/components/Icons/page"
+import { Calendar } from "@/components/Icons/page"
 import Line from "@/components/Line/page"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Parrafo from "@/components/Paragraph/page"
 import Titulo from "@/components/Title/page"
-import CalOpen, { CalPop } from "@/components/Calendly/page"
+import CalOpen from "@/components/Calendly/page"
 import ImageWidth from "@/components/ImageWidth/page"
 import Link from "next/link"
 import { useState } from "react"
-import { Link as ReactLink } from "react-scroll"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
 import Modal from "@/components/Modal/page"
+import YouTube from "react-youtube"
 
-const beneficios = [
+const sliderPrincipal = [
   {
-    icon: (
-      <Custom width={100} height={100} className="w-10 h-10" fill="#001959" />
-    ),
-    title: "Experiencia personalizada",
-    description: "Asesores con amplio conocimiento del sistema educativo ruso.",
+    image: "/1.jpg",
   },
   {
-    icon: (
-      <University
-        width={100}
-        height={100}
-        className="w-10 h-10"
-        fill="#001959"
-      />
-    ),
-    title: "Universidades de prestigio",
-    description: "Acceso a instituciones de renombre y alta calidad académica.",
+    image: "/2.jpg",
   },
   {
-    icon: (
-      <Advisor width={100} height={100} className="w-10 h-10" fill="#001959" />
-    ),
-    title: "Asesoría integral",
-    description: "Apoyo personalizado en cada etapa del proceso educativo.",
-  },
-
-  {
-    icon: (
-      <Community
-        width={100}
-        height={100}
-        className="w-10 h-10"
-        fill="#001959"
-      />
-    ),
-    title: "Comunidad estudiantil",
-    description:
-      "Conexiones con una red diversa de estudiantes y profesionales.",
-  },
-]
-
-const section = [
-  {
-    name: "Beneficios",
-    path: "beneficios",
+    image: "/3.jpg",
   },
   {
-    name: "Idioma",
-    path: "idioma",
-  },
-
-  {
-    name: "Universidades",
-    path: "universidades",
+    image: "/4.jpg",
   },
   {
-    name: "Testimonios",
-    path: "testimonios",
+    image: "/5.jpg",
   },
   {
-    name: "Proceso",
-    path: "proceso",
+    image: "/6.jpg",
   },
   {
-    name: "Contacto",
-    path: "contacto",
-  },
-  {
-    name: "FAQ",
-    path: "faq",
+    image: "/7.jpg",
   },
 ]
 
@@ -130,28 +72,14 @@ const programas = [
   },
   {
     index: 1,
-    title: "Programas",
-    description:
-      "La Universidad Estatal de San Petersburgo es una universidad pública de investigación ubicada en San Petersburgo, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/sanpetersburgo.jpg",
-  },
-  {
-    index: 2,
     title: "Maestrías",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/ekaterimburgo.jpg",
   },
   {
-    index: 3,
+    index: 2,
     title: "Curso de ruso",
-    description:
-      "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/ekaterimburgo.jpg",
-  },
-  {
-    index: 4,
-    title: "Certificación",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
     imagen: "/ekaterimburgo.jpg",
@@ -188,21 +116,7 @@ const preguntas = [
   },
 ]
 
-const testimonios = [
-  {
-    video: "/test1.png",
-  },
-  {
-    video: "/test2.png",
-  },
-  {
-    video: "/test3.png",
-  },
-]
-
 export default function Home() {
-  const [open, setOpen] = useState(true)
-  const [fadeOut, setFadeOut] = useState(false)
   const [selectedProgram, setSelectedProgram] = useState(null)
 
   const handleProgramClick = (index) => {
@@ -213,40 +127,6 @@ export default function Home() {
     setSelectedProgram(null)
   }
 
-  const handleButtonClick = () => {
-    setFadeOut(true)
-    setTimeout(() => {
-      setOpen(false)
-    }, 200)
-  }
-
-  if (open) {
-    return (
-      <div
-        className={`bg-transparent h-full w-full transition duration-200 ease-in-out ${
-          fadeOut ? "opacity-0" : "opacity-100"
-        }`}
-        onTransitionEnd={() => setFadeOut(false)}
-      >
-        <div className="bg-[url('/gif.gif')] bg-no-repeat bg-cover bg-center">
-          <div className="bg-[#001959]/70">
-            <div className="h-[100vh] w-full flex flex-col justify-center items-center">
-              <h1 className="text-2xl font-bold text-white lg:text-5xl sm:text-3xl md:text-4xl md:w-[50%] w-[90%] text-center">
-                ¡Descubre un mundo de oportunidades educativas en Rusia con
-                Privet!
-              </h1>
-              <button
-                className="py-2 px-6 rounded-lg bg-[#6083D4]/60 hover:bg-[#6083D4]/80 text-white transition duration-500 ease-in-out mt-5"
-                onClick={handleButtonClick}
-              >
-                Mas información
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
   const settings = {
     dots: true,
     infinite: true,
@@ -255,6 +135,14 @@ export default function Home() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+  }
+
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 1,
+    },
   }
 
   const settings3 = {
@@ -290,62 +178,41 @@ export default function Home() {
       <header className="h-24 w-[85%] mx-auto">
         <div className="flex items-center justify-between h-full">
           <Image
-            src="/privet.png"
+            src="/logo.png"
             alt="logo"
             width={150}
-            height={50}
+            height={60}
             className="w-10 md:w-14 lg:w-16"
           />
-          <div className="hidden xl:block">
-            <ul className="flex items-center justify-between">
-              {section.map((item, index) => (
-                <li key={index} className="ml-5">
-                  <ReactLink
-                    activeClass="active"
-                    to={item.path}
-                    spy={true}
-                    smooth={true}
-                    duration={250 * (index + 1)}
-                    className="hover:text-[#6083D4] transition duration-300 ease-linear text-gray-800"
-                  >
-                    {item.name}
-                  </ReactLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex items-center">
-            <div className="hidden min-[375px]:block">
-              <span className="flex items-center text-gray-800">
-                <Phone
-                  width={100}
-                  height={100}
-                  className="hidden mr-2 w-7 h-7 sm:block"
-                  fill="#001959"
-                />
-                +495 95220935
-              </span>
-            </div>
-            <CalPop />
-          </div>
         </div>
       </header>
       <main>
         <div className="w-[85%] mx-auto">
           <div className="relative">
             <Slider {...settings}>
-              <div className="bg-[url('/6.jpg')] h-[35rem] bg-center bg-no-repeat bg-cover rounded-3xl overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-r from-[#001959] to-transparent"></div>
-              </div>
+              {sliderPrincipal.map((item, index) => (
+                <div className="px-1 py-2" key={index}>
+                  <div className="h-[35rem] relative rounded-3xl overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt="Slider Image"
+                      width={2000}
+                      height={1000}
+                      className="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
+                    />
+                    <div className="w-full h-full bg-gradient-to-r from-[#001959]/70 to-transparent z-50"></div>
+                  </div>
+                </div>
+              ))}
             </Slider>
             <div className="absolute top-0 bottom-0 right-0 left-0">
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
-                  ¡Descubre un mundo de oportunidades educativas en Rusia con
-                  Privet!
+                  Dile hola a Rusia, sin importar si tienes un conocimiento
+                  mínimo del idioma y obtén tu visado en menos de 90 días
                 </h1>
                 <p className="mt-5 leading-5 text-white">
-                  En Privet, nos apasiona brindar igualdad de oportunidades a
+                  En ZDOROVO, nos apasiona brindar igualdad de oportunidades a
                   estudiantes latinoamericanos que buscan una educación de
                   calidad a nivel mundial. Con nuestra asesoría especializada y
                   un equipo comprometido, te ofrecemos la puerta de entrada a
@@ -365,28 +232,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="pt-16 flex justify-center">
           <OpacityAnimation>
-            <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-5 my-10 xl:grid-cols-4">
-              {beneficios.map((item, index) => (
-                <div
-                  className="flex w-full flex-col items-center hover:shadow-lg rounded-lg py-4 bg-[#f3f9ff] hover:scale-105 transition duration-500 ease-in-out"
-                  key={index}
-                  name="beneficios"
-                >
-                  <div className="mb-4">
-                    <div className="p-3 bg-white rounded-lg shadow-lg shadow-black/5">
-                      {item.icon}
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 gap-1 mx-5 xl:mx-3 text-center">
-                    <h1 className="my-0 text-lg font-bold leading-6 text-[#001959]">
-                      {item.title}
-                    </h1>
-                    <p className="text-sm text-gray-500">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <YouTube videoId="OlI_glpNGUY" opts={opts} />
           </OpacityAnimation>
         </div>
         <div name="idioma">
@@ -458,51 +307,24 @@ export default function Home() {
             </div>
           </OpacityAnimation>
         </div>
-        <div name="testimonios">
-          <div className="w-[85%] mx-auto py-16">
-            <OpacityAnimation>
-              <Titulo>Turismo</Titulo>
-              <Line />
-              <Slider {...settings3}>
-                {testimonios.map((item, index) => (
-                  <div key={index} className="px-4 py-5">
-                    <div className="overflow-hidden rounded-lg relative hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
-                      <div className="w-full h-[14.5rem]">
-                        <div className="bg-[#001959]/70 absolute h-full w-full">
-                          <div className="flex items-center justify-center h-full">
-                            <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
-                              Testimonio
-                            </h1>
-                          </div>
-                        </div>
-                        <Image
-                          src={item.video}
-                          alt={`${item.description}`}
-                          width={1000}
-                          height={1000}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            </OpacityAnimation>
-          </div>
-        </div>
         <div name="proceso">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/asesoramiento.jpg" alt="nose" />
+              <ImageWidth src="/idioma.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
-                <Titulo>Proceso de asesoramiento</Titulo>
-                <Line />
+                <OpacityAnimation>
+                  <Titulo>¿IDIOMA? Не волнуйся</Titulo>
+                  <Line />
 
-                <Parrafo>
-                  En Privet, te brindamos asesoría profesional y seguridad en
-                  cada paso del proceso de admisión. ¡Cumple tus sueños
-                  académicos con nosotros!
-                </Parrafo>
+                  <Parrafo>
+                    ¿No entendiste verdad? Tranquilo yo estaba igual al
+                    principio y ya pase por ese proceso, es mas sencillo de lo
+                    que crees. Uno de los primeros pasos que realizaremos será
+                    en la inscripción de la facultad de idioma, por cierto, no
+                    te olvides, tenemos la comunidad ZDOROVO en rusia que hara
+                    mas agradable tu experiencia.
+                  </Parrafo>
+                </OpacityAnimation>
                 <ul className="mt-8">
                   <OpacityAnimation>
                     {proceso.map((item, index) => (
