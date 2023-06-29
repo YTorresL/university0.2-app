@@ -175,43 +175,44 @@ export default function Home() {
   }
   return (
     <>
-      <header className="h-24 w-[85%] mx-auto">
+      <header className="sm:h-24 h-20 w-[85%] mx-auto">
         <div className="flex items-center justify-between h-full">
           <Image
-            src="/logo.png"
+            src="/logoZ.png"
             alt="logo"
-            width={150}
-            height={60}
-            className="w-10 md:w-14 lg:w-16"
+            width={800}
+            height={800}
+            className="w-24 sm:w-28 lg:w-36"
           />
         </div>
       </header>
       <main>
         <div className="w-[85%] mx-auto">
-          <div className="relative">
+          <div className="relative rounded-3xl overflow-hidden">
             <Slider {...settings}>
               {sliderPrincipal.map((item, index) => (
-                <div className="px-1 py-2" key={index}>
-                  <div className="h-[35rem] relative rounded-3xl overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt="Slider Image"
-                      width={2000}
-                      height={1000}
-                      className="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
-                    />
-                    <div className="w-full h-full bg-gradient-to-r from-[#001959]/70 to-transparent z-50"></div>
-                  </div>
+                <div className="h-[35rem] relative" key={index}>
+                  <Image
+                    src={item.image}
+                    alt="DILE HOLA A RUSIA, sin importar si tienes un conocimiento mínimo del idioma y obtén tu visado en menos de 90 días"
+                    width={2000}
+                    height={1000}
+                    className="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
+                  />
+                  <div className="w-full h-full bg-gradient-to-r from-[#001959]/80 to-transparent z-50"></div>
                 </div>
               ))}
             </Slider>
             <div className="absolute top-0 bottom-0 right-0 left-0">
               <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
                 <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
-                  Dile hola a Rusia, sin importar si tienes un conocimiento
-                  mínimo del idioma y obtén tu visado en menos de 90 días
+                  DILE HOLA A RUSIA
                 </h1>
-                <p className="mt-5 leading-5 text-white">
+                <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                  Sin importar si tienes un conocimiento mínimo del idioma y
+                  obtén tu visado en menos de 90 días
+                </h1>
+                <p className="mt-3 leading-5 text-white">
                   En ZDOROVO, nos apasiona brindar igualdad de oportunidades a
                   estudiantes latinoamericanos que buscan una educación de
                   calidad a nivel mundial. Con nuestra asesoría especializada y
