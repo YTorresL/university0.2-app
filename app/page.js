@@ -12,7 +12,7 @@ import Link from "next/link"
 import { useState } from "react"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
 import Modal from "@/components/Modal/page"
-import YouTube from "react-youtube"
+import ResponsiveEmbed from "react-responsive-embed"
 
 const sliderPrincipal = [
   {
@@ -154,14 +154,6 @@ export default function Home() {
     autoplaySpeed: 5000,
   }
 
-  const opts = {
-    height: "100%",
-    width: "100%",
-    playerVars: {
-      autoplay: 1,
-    },
-  }
-
   const flechas = []
 
   for (let i = 0; i < 3; i++) {
@@ -254,9 +246,10 @@ export default function Home() {
         <div className="pt-16 flex flex-col justify-center items-center">
           <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
           <OpacityAnimation>
-            <div className="relative pb-[56.25%] h-0 overflow-hidden">
-              <YouTube videoId="OlI_glpNGUY" opts={opts} />
-            </div>
+            <ResponsiveEmbed
+              src="https://www.youtube.com/embed/2yqz9zgoC-U"
+              allowfullscreen
+            />
           </OpacityAnimation>
         </div>
         <div name="idioma">
