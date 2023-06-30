@@ -13,7 +13,6 @@ import { useState } from "react"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
 import Modal from "@/components/Modal/page"
 import YouTube from "react-youtube"
-import { useMediaQuery } from "react-responsive"
 
 const sliderPrincipal = [
   {
@@ -155,11 +154,9 @@ export default function Home() {
     autoplaySpeed: 5000,
   }
 
-  const isMobile = useMediaQuery({maxWidth: 767})
-
   const opts = {
-    height: isMobile ? "390" : "290",
-    width: isMobile ? "640" : "440",
+    height: "100%",
+    width: "100%",
     playerVars: {
       autoplay: 1,
     },
@@ -180,7 +177,6 @@ export default function Home() {
       </div>
     )
   }
-
 
   const settings3 = {
     dots: true,
@@ -255,7 +251,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="pt-16 flex flex-col justify-center items-center">
+        <div className="pt-16 flex flex-col justify-center items-center w-[85%] md:w-[60%] mx-auto">
           <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
           <OpacityAnimation>
             <YouTube videoId="OlI_glpNGUY" opts={opts} />
