@@ -9,6 +9,7 @@ import Titulo from "@/components/Title/page"
 import ImageWidth from "@/components/ImageWidth/page"
 import Link from "next/link"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
+import { Instagram, Youtube } from "@/components/Icons/page"
 
 const sliderPrincipal = [
   {
@@ -64,10 +65,12 @@ const link = [
   {
     name: "Instagram",
     link: "https://www.instagram.com/zdorovo.russia/",
+    svg: <Instagram className="w-11 h-11" />,
   },
   {
     name: "Youtube",
     link: "https://www.youtube.com/@zdorovo.russia",
+    svg: <Youtube className="w-11 h-11" fill="#fff" />,
   },
   {
     name: "Tik Tok",
@@ -399,35 +402,47 @@ export default function Home() {
 
       <footer className="bg-[#001959] text-white">
         <div className="mx-auto w-[95%] md:w-[85%] p-4 pt-6 md:pt-20 lg:pb-0">
-          <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
-            <Image
-              src="/logoW.png"
-              alt="ZDOROVO"
-              width={800}
-              height={800}
-              className="w-48 md:w-72 lg:w-80 mb-4"
-            />
-            <div></div>
+          <div className="grid w-full justify-items-end grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
             <div>
-              <h2 className="mb-6 text-lg font-bold">Redes sociales</h2>
-              <ul className="text-base ">
-                {link.map((item, index) => (
-                  <li className="mb-2" key={index}>
-                    <Link href={item.link} className="hover:underline">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <Image
+                src="/logoW.png"
+                alt="ZDOROVO"
+                width={800}
+                height={800}
+                className="w-48 md:w-72 lg:w-80 mb-6"
+              />
+              <div className="break-words">
+                <h2 className="mb-4 text-base font-bold uppercase">
+                  Redes sociales
+                </h2>
+                <ul className="grid grid-cols-3 gap-5 sm:gap-2">
+                  {link.map((item, index) => (
+                    <li className="mb-2" key={index}>
+                      <Link href={item.link}>{item.svg}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div>
-              <h2 className="mb-6 text-lg font-bold">Contacto</h2>
-              <ul className="text-base ">
-                <li className="mb-2">+495 95220935</li>
+            <div></div>
+            <div className="col-span-2 break-words">
+              <ul className="text-base">
                 <li className="mb-2">
-                  <span className="break-words">
-                    informacionzdorovo@gmail.com
-                  </span>
+                  <p>
+                    Contáctanos para saber mas información sobre los programas.
+                  </p>
+                </li>
+                <li className="mb-2">
+                  <h2 className="mb-2 text-base font-bold uppercase">
+                    Numero de contacto
+                  </h2>
+                  <p>+495 95220935</p>
+                </li>
+                <li className="mb-2">
+                  <h2 className="mb-2 text-base font-bold uppercase">
+                    Correo electronico
+                  </h2>
+                  <p>informacionzdorovo@gmail.com</p>
                 </li>
               </ul>
             </div>
