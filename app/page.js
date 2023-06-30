@@ -13,6 +13,7 @@ import { useState } from "react"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
 import Modal from "@/components/Modal/page"
 import YouTube from "react-youtube"
+import { useMediaQuery } from "react-responsive"
 
 const sliderPrincipal = [
   {
@@ -154,9 +155,11 @@ export default function Home() {
     autoplaySpeed: 5000,
   }
 
+  const isMobile = useMediaQuery({maxWidth: 767})
+
   const opts = {
-    height: "390",
-    width: "640",
+    height: isMobile ? "390" : "290",
+    width: isMobile ? "640" : "440",
     playerVars: {
       autoplay: 1,
     },
@@ -177,6 +180,7 @@ export default function Home() {
       </div>
     )
   }
+
 
   const settings3 = {
     dots: true,
