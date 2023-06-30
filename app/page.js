@@ -246,10 +246,12 @@ export default function Home() {
         <div className="pt-16 flex flex-col justify-center items-center">
           <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
           <OpacityAnimation>
-            <ResponsiveEmbed
-              src="https://www.youtube.com/embed/2yqz9zgoC-U"
-              allowfullscreen
-            />
+            <div className="w-72 md:w-[40rem]">
+              <ResponsiveEmbed
+                src="https://www.youtube.com/embed/OlI_glpNGUY"
+                allowfullscreen
+              />
+            </div>
           </OpacityAnimation>
         </div>
         <div name="idioma">

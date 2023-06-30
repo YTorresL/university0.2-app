@@ -14,7 +14,7 @@ const font = Roboto({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en" className={`overflow-x-hidden ${font.className}`}>
       <body>{children}</body>
     </html>
   )
