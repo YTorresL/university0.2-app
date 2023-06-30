@@ -319,7 +319,7 @@ export default function Home() {
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth
-                src="/www.jpg"
+                src="/wwww.png"
                 alt="Paso a paso desde que estas en tu país hasta que llegas a RUSIA"
               />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
