@@ -155,8 +155,8 @@ export default function Home() {
   }
 
   const opts = {
-    height: "100%",
-    width: "100%",
+    height: "290",
+    width: "440",
     playerVars: {
       autoplay: 1,
     },
@@ -251,13 +251,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="pt-16 flex flex-col justify-center items-center w-[85%] md:w-[60%] mx-auto">
+        <div className="pt-16 flex flex-col justify-center items-center">
           <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
-          <div className="h-96">
-            <OpacityAnimation>
-              <YouTube videoId="OlI_glpNGUY" opts={opts} />
-            </OpacityAnimation>
-          </div>
+          <OpacityAnimation>
+            <YouTube videoId="OlI_glpNGUY" opts={opts} />
+          </OpacityAnimation>
         </div>
         <div name="idioma">
           <div className="sm:w-[60%] mx-auto py-16 w-[85%]">
