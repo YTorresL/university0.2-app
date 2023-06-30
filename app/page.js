@@ -155,8 +155,8 @@ export default function Home() {
   }
 
   const opts = {
-    height: "290",
-    width: "440",
+    height: "100%",
+    width: "100%",
     playerVars: {
       autoplay: 1,
     },
@@ -254,7 +254,9 @@ export default function Home() {
         <div className="pt-16 flex flex-col justify-center items-center">
           <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
           <OpacityAnimation>
-            <YouTube videoId="OlI_glpNGUY" opts={opts} />
+            <div className="relative pb-[56.25%] h-0 overflow-hidden">
+              <YouTube videoId="OlI_glpNGUY" opts={opts} />
+            </div>
           </OpacityAnimation>
         </div>
         <div name="idioma">
