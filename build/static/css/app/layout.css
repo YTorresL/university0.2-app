@@ -1,3 +1,16 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[3].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[2].oneOf[3].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.js","import":"Roboto","arguments":[{"weight":["500","700","900"],"subsets":["latin"]}],"variableName":"font"} ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@font-face {
+  font-family: '__Roboto_Fallback_27a9fa';
+  src: local("Arial");
+  ascent-override:92.67%;
+  descent-override:24.39%;
+  line-gap-override:0.00%;
+  size-adjust:100.11%;
+}@font-face {font-family: '__Roboto_Fallback_Fallback_27a9fa';src: local("Arial");ascent-override: 92.67%;descent-override: 24.39%;line-gap-override: 0.00%;size-adjust: 100.11%
+}.__className_27a9fa {font-family: '__Roboto_Fallback_27a9fa', '__Roboto_Fallback_Fallback_27a9fa';font-style: normal
+}
 /*!***********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!./app/globals.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************/
@@ -599,6 +612,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-0 {
+  height: 0px;
+}
 .w-24 {
   width: 6rem;
 }
@@ -762,6 +778,9 @@ video {
 .pt-6 {
   padding-top: 1.5rem;
 }
+.pb-\[56\.25\%\] {
+  padding-bottom: 56.25%;
+}
 .text-center {
   text-align: center;
 }
@@ -814,32 +833,47 @@ video {
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .hover\:bg-\[\#001959\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 25 89 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-\[\#012b94\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(1 43 148 / var(--tw-bg-opacity));
 }
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+
 .hover\:shadow-lg:hover {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
 @media (min-width: 640px) {
 
   .sm\:h-24 {
@@ -863,6 +897,7 @@ video {
     line-height: 2rem;
   }
 }
+
 @media (min-width: 768px) {
 
   .md\:mb-0 {
@@ -927,6 +962,7 @@ video {
     line-height: 2.25rem;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:mr-20 {
@@ -963,19 +999,6 @@ video {
   }
 }
 
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[3].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[2].oneOf[3].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.js","import":"Roboto","arguments":[{"weight":["500","700","900"],"subsets":["latin"]}],"variableName":"font"} ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-@font-face {
-  font-family: '__Roboto_Fallback_27a9fa';
-  src: local("Arial");
-  ascent-override:92.67%;
-  descent-override:24.39%;
-  line-gap-override:0.00%;
-  size-adjust:100.11%;
-}@font-face {font-family: '__Roboto_Fallback_Fallback_27a9fa';src: local("Arial");ascent-override: 92.67%;descent-override: 24.39%;line-gap-override: 0.00%;size-adjust: 100.11%
-}.__className_27a9fa {font-family: '__Roboto_Fallback_27a9fa', '__Roboto_Fallback_Fallback_27a9fa';font-style: normal
-}
 /*!************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!./node_modules/normalize.css/normalize.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************************/

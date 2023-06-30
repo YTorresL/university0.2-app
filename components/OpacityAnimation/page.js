@@ -14,7 +14,7 @@ export default function OpacityAnimation({ children }) {
   })
 
   return (
-    <div className="h-full w-full" ref={ref}>
+    <div ref={ref}>
       <animated.div style={fade}>{children}</animated.div>
     </div>
   )
