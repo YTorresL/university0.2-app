@@ -231,8 +231,8 @@ export default function Home() {
                       src={item.image}
                       alt="DILE HOLA A RUSIA, sin importar si tienes un conocimiento mínimo del idioma y obtén tu visado en menos de 90 días"
                       width={2000}
-                      height={1000}
-                      className="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
+                      height={2000}
+                      className="object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
                     />
                   </div>
                 ))}
@@ -410,7 +410,7 @@ export default function Home() {
       </main>
 
       <footer className="bg-[#001959] text-white">
-        <div className="mx-auto w-[85%] p-4 pt-6 md:pt-20 lg:pb-0">
+        <div className="mx-auto w-[95%] md:w-[85%] p-4 pt-6 md:pt-20 lg:pb-0">
           <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
             <Image
               src="/logoW.png"
