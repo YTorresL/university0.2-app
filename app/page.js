@@ -350,20 +350,23 @@ export default function Home() {
         >
           <div className="bg-[#001959]/70">
             <div className="w-[85%] mx-auto py-10">
-
-                <div className="flex flex-col items-center justify-center md:flex-row">
-                  <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                    <ImageWidth src="/estudiante.jpg" alt="nose"/>
-                  </div>
-                  <OpacityAnimation>
+              <div className="flex flex-col items-center justify-center md:flex-row">
+                <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
+                  <ImageWidth src="/estudiante.jpg" alt="nose" />
+                </div>
+                <OpacityAnimation>
                   <div className="my-6">
                     <h1 className="text-xl font-bold text-white sm:text-2xl md:text-3xl m-0">
-                      Ellos ya están viviendo la experiencia de pertenecer en la comunidad latina de mas rapido crecimiento en Rusia con ZDOROVO
+                      Ellos ya están viviendo la experiencia de pertenecer en la
+                      comunidad latina de mas rapido crecimiento en Rusia con
+                      ZDOROVO
                     </h1>
+                    <button className="px-6 py-2 mt-6 text-white bg-[#6083D4] hover:bg-[#4567b8] transition duration-500 ease-in-out rounded-full">
+                      ¿Quieres ser el proximo en Rusia?
+                    </button>
                   </div>
-                  </OpacityAnimation>
-                </div>
-              
+                </OpacityAnimation>
+              </div>
             </div>
           </div>
         </div>
@@ -424,7 +427,9 @@ export default function Home() {
               <h2 className="mb-6 text-lg font-bold">Contacto</h2>
               <ul className="text-base ">
                 <li className="mb-2">+495 95220935</li>
-                <li className="mb-2 hyphens-manual">informacionzdorovo@gmail.com</li>
+                <li className="mb-2 hyphens-manual">
+                  informacionzdorovo@gmail.com
+                </li>
               </ul>
             </div>
           </div>

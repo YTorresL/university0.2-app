@@ -579,6 +579,15 @@ video {
 .mt-\[10\%\] {
   margin-top: 10%;
 }
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .flex {
   display: flex;
 }
@@ -775,6 +784,10 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .pt-16 {
   padding-top: 4rem;
 }
@@ -850,6 +863,10 @@ video {
 .hover\:bg-\[\#012b94\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(1 43 148 / var(--tw-bg-opacity));
+}
+.hover\:bg-\[\#4567b8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 103 184 / var(--tw-bg-opacity));
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
