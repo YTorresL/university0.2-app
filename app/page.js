@@ -8,10 +8,7 @@ import Parrafo from "@/components/Paragraph/page"
 import Titulo from "@/components/Title/page"
 import ImageWidth from "@/components/ImageWidth/page"
 import Link from "next/link"
-import { useState } from "react"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
-import Modal from "@/components/Modal/page"
-import ResponsiveEmbed from "react-responsive-embed"
 
 const sliderPrincipal = [
   {
@@ -133,15 +130,18 @@ const preguntas = [
 ]
 
 export default function Home() {
-  const [selectedProgram, setSelectedProgram] = useState(null)
-
-  const handleProgramClick = (index) => {
-    setSelectedProgram(programas[index])
-  }
-
-  const handleCloseModal = () => {
-    setSelectedProgram(null)
-  }
+  const YoutubeEmbed = ({ embedId }) => (
+    <div className="video-responsive">
+      <iframe
+        width="853"
+        height="480"
+        src={`https://www.youtube.com/embed/${embedId}`}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Embedded youtube"
+      />
+    </div>
+  )
 
   const settings = {
     dots: true,
@@ -203,7 +203,7 @@ export default function Home() {
         <div className="flex items-center justify-between h-full">
           <Image
             src="/logoO.png"
-            alt="logo"
+            alt="ZDOROVO"
             width={800}
             height={800}
             className="w-24 sm:w-28 lg:w-36"
@@ -244,15 +244,12 @@ export default function Home() {
         </div>
         <div className="pt-16 flex flex-col justify-center items-center">
           <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
-          <OpacityAnimation>
-            <div className="w-72 md:w-[40rem]">
-              <ResponsiveEmbed
-                src="https://www.youtube.com/embed/OlI_glpNGUY"
-                allowfullscreen
-              />
-            </div>
-          </OpacityAnimation>
         </div>
+        <OpacityAnimation>
+          <div className="w-[85%] md:w-[50%] mx-auto">
+            <YoutubeEmbed embedId="OlI_glpNGUY " />
+          </div>
+        </OpacityAnimation>
         <div>
           <div className="sm:w-[60%] mx-auto py-16 w-[85%]">
             <div className="text-center">
@@ -279,11 +276,7 @@ export default function Home() {
               <Line />
               <Slider {...settings3}>
                 {programas.map((item, index) => (
-                  <div
-                    key={index}
-                    className="px-4 py-6 relative pointer-events-auto"
-                    onClick={() => handleProgramClick(index)}
-                  >
+                  <div key={index} className="px-4 py-6 relative">
                     <div className="overflow-hidden rounded-lg transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
                       <div className="bg-[#001959]/30 absolute h-full w-full">
                         <div className="flex items-center justify-center h-full">
@@ -307,11 +300,6 @@ export default function Home() {
                   </div>
                 ))}
               </Slider>
-              {selectedProgram && (
-                <Modal isOpen={!!selectedProgram} onClose={handleCloseModal}>
-                  {selectedProgram.title}
-                </Modal>
-              )}
             </div>
           </OpacityAnimation>
         </div>
@@ -414,7 +402,7 @@ export default function Home() {
           <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
             <Image
               src="/logoW.png"
-              alt="logo"
+              alt="ZDOROVO"
               width={800}
               height={800}
               className="w-48 md:w-72 lg:w-80 mb-4"
@@ -436,8 +424,10 @@ export default function Home() {
               <h2 className="mb-6 text-lg font-bold">Contacto</h2>
               <ul className="text-base ">
                 <li className="mb-2">+495 95220935</li>
-                <li className="mb-2 hyphens-manual">
-                  informacionzdorovo@gmail.com
+                <li className="mb-2">
+                  <span className="break-words">
+                    informacionzdorovo@gmail.com
+                  </span>
                 </li>
               </ul>
             </div>
