@@ -222,17 +222,17 @@ export default function Home() {
       <main>
         <div className="w-[85%] mx-auto">
           <div className="rounded-3xl overflow-hidden">
-            <div className="relative">
+            <div className="relative h-[35rem]">
               <div className="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-r from-[#001959]/80 to-transparent z-30"></div>
               <Slider {...settings}>
                 {sliderPrincipal.map((item, index) => (
-                  <div className="h-[35rem] relative" key={index}>
+                  <div className="h-[35rem]" key={index}>
                     <Image
                       src={item.image}
                       alt="DILE HOLA A RUSIA, sin importar si tienes un conocimiento mínimo del idioma y obtén tu visado en menos de 90 días"
                       width={2000}
                       height={2000}
-                      className="object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
+                      className="object-cover object-center w-full h-full -z-10"
                     />
                   </div>
                 ))}
