@@ -350,29 +350,20 @@ export default function Home() {
         >
           <div className="bg-[#001959]/70">
             <div className="w-[85%] mx-auto py-10">
-              <OpacityAnimation>
+
                 <div className="flex flex-col items-center justify-center md:flex-row">
                   <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                    <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl m-0">
-                      ¿Sueñas con estudiar en Rusia?
-                    </h1>
-                    <p className="mt-3 text-white">
-                      ¡Hazlo realidad con nuestro asesoramiento experto! Te
-                      guiaremos en el proceso de planificación, trámites y
-                      selección de universidades. Obtén información confiable y
-                      precisa sobre visas, programas de estudio y más.
-                    </p>
-                    <p className="mt-3 text-white">
-                      ¡Contáctanos hoy mismo para comenzar tu aventura educativa
-                      en Rusia! Haz clic aquí para solicitar tu asesoramiento
-                      personalizado.
-                    </p>
+                    <ImageWidth src="/estudiante.jpg" alt="nose"/>
                   </div>
+                  <OpacityAnimation>
                   <div className="my-6">
-                    <CalOpen />
+                    <h1 className="text-xl font-bold text-white sm:text-2xl md:text-3xl m-0">
+                      Ellos ya están viviendo la experiencia de pertenecer en la comunidad latina de mas rapido crecimiento en Rusia con ZDOROVO
+                    </h1>
                   </div>
+                  </OpacityAnimation>
                 </div>
-              </OpacityAnimation>
+              
             </div>
           </div>
         </div>
@@ -433,7 +424,7 @@ export default function Home() {
               <h2 className="mb-6 text-lg font-bold">Contacto</h2>
               <ul className="text-base ">
                 <li className="mb-2">+495 95220935</li>
-                <li className="mb-2">informacionzdorovo@gmail.com</li>
+                <li className="mb-2 hyphens-manual">informacionzdorovo@gmail.com</li>
               </ul>
             </div>
           </div>
