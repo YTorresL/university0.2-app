@@ -322,6 +322,11 @@ export default function Home() {
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <ul className="mt-8">
                   <OpacityAnimation>
+                    <Titulo>
+                      Paso a paso desde que estas en tu país hasta que llegas a
+                      RUSIA
+                    </Titulo>
+                    <Line />
                     {proceso.map((item, index) => (
                       <li className="flex my-3 leading-6" key={index}>
                         <div>
