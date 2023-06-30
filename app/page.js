@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import { Calendar } from "@/components/Icons/page"
 import Line from "@/components/Line/page"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
@@ -68,18 +67,17 @@ const proceso = [
 const link = [
   {
     name: "Instagram",
-    link: "https://www.instagram.com/zdorovo.russia/"
+    link: "https://www.instagram.com/zdorovo.russia/",
   },
   {
     name: "Youtube",
-    link: "https://www.youtube.com/@zdorovo.russia"
+    link: "https://www.youtube.com/@zdorovo.russia",
   },
   {
     name: "Tik Tok",
-    link: "https://www.tiktok.com/@zdorovo.russia?is_from_webapp=1&sender_device=pc"
-  }
-  ]
-  
+    link: "https://www.tiktok.com/@zdorovo.russia?is_from_webapp=1&sender_device=pc",
+  },
+]
 
 const programas = [
   {
@@ -266,12 +264,12 @@ export default function Home() {
                 <Titulo>¿IDIOMA? Не волнуйся</Titulo>
                 <Line center />
                 <Parrafo>
-                  ¿No entendiste verdad? Tranquilo yo estaba igual al
-                    principio y ya pase por ese proceso, es mas sencillo de lo
-                    que crees. Uno de los primeros pasos que realizaremos será
-                    en la inscripción de la facultad de idioma, por cierto, no
-                    te olvides, tenemos la comunidad ZDOROVO en rusia que hara
-                    mas agradable tu experiencia.
+                  ¿No entendiste verdad? Tranquilo yo estaba igual al principio
+                  y ya pase por ese proceso, es mas sencillo de lo que crees.
+                  Uno de los primeros pasos que realizaremos será en la
+                  inscripción de la facultad de idioma, por cierto, no te
+                  olvides, tenemos la comunidad ZDOROVO en rusia que hara mas
+                  agradable tu experiencia.
                 </Parrafo>
               </OpacityAnimation>
             </div>
@@ -283,11 +281,11 @@ export default function Home() {
             <div className="w-[85%] mx-auto py-16">
               <Titulo>Universidades y programas</Titulo>
               <Line />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <Slider {...settings3}>
                 {programas.map((item, index) => (
                   <div
                     key={index}
-                    className="relative pointer-events-auto"
+                    className="px-4 py-6 relative pointer-events-auto"
                     onClick={() => handleProgramClick(index)}
                   >
                     <div className="overflow-hidden rounded-lg transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
@@ -312,7 +310,7 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </Slider>
               {selectedProgram && (
                 <Modal isOpen={!!selectedProgram} onClose={handleCloseModal}>
                   {selectedProgram.title}
@@ -425,13 +423,12 @@ export default function Home() {
             <div>
               <h2 className="mb-6 text-lg font-bold">Redes sociales</h2>
               <ul className="text-base ">
-              {link.map((item, index) => (
-                <li className="mb-2" key={index}>
-                
-                  <Link href={item.link} className="hover:underline">
-                    {item.name}
-                  </Link>
-                </li>
+                {link.map((item, index) => (
+                  <li className="mb-2" key={index}>
+                    <Link href={item.link} className="hover:underline">
+                      {item.name}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>
