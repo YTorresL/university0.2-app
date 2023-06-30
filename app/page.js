@@ -231,10 +231,10 @@ export default function Home() {
               </Slider>
               <div className="absolute top-0 bottom-0 right-0 left-0 z-50">
                 <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
-                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                  <h1 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
                     DILE HOLA A RUSIA
                   </h1>
-                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                  <h1 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
                     Sin importar si tienes un conocimiento mínimo del idioma y
                     obtén tu visado en menos de 90 días
                   </h1>
@@ -319,7 +319,7 @@ export default function Home() {
         <div name="proceso">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/idioma.jpg" alt="nose" />
+              <ImageWidth src="/www.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <ul className="mt-8">
                   <OpacityAnimation>
