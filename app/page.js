@@ -253,7 +253,7 @@ export default function Home() {
             </div>
           </OpacityAnimation>
         </div>
-        <div name="idioma">
+        <div>
           <div className="sm:w-[60%] mx-auto py-16 w-[85%]">
             <div className="text-center">
               <OpacityAnimation>
@@ -272,7 +272,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#f3f9ff]" name="universidades">
+        <div className="bg-[#f3f9ff]">
           <OpacityAnimation>
             <div className="w-[85%] mx-auto py-16">
               <Titulo>Universidades y programas</Titulo>
@@ -315,10 +315,13 @@ export default function Home() {
             </div>
           </OpacityAnimation>
         </div>
-        <div name="proceso">
+        <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/www.jpg" alt="nose" />
+              <ImageWidth
+                src="/www.jpg"
+                alt="Paso a paso desde que estas en tu país hasta que llegas a RUSIA"
+              />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <ul className="mt-8">
                   <OpacityAnimation>
@@ -348,15 +351,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div
-          className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden"
-          name="contacto"
-        >
+        <div className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
           <div className="bg-[#001959]/70">
             <div className="w-[85%] mx-auto py-10">
               <div className="flex flex-col items-center justify-center md:flex-row">
                 <div className="w-full md:w-1/2 md:mr-10 lg:mr-20">
-                  <ImageWidth src="/estudiante.jpg" alt="nose" />
+                  <ImageWidth
+                    src="/estudiante.jpg"
+                    alt="Ellos ya están viviendo la experiencia de pertenecer en la comunidad latina de mas rapido crecimiento en Rusia con ZDOROVO"
+                  />
                 </div>
                 <OpacityAnimation>
                   <div className="my-6">
@@ -374,14 +377,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div name="faq">
+        <div>
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/idioma.jpg" alt="nose" />
+              <ImageWidth
+                src="/idioma.jpg"
+                alt="Tienes alguna duda, te invitamos a revisar las preguntas más frecuentes."
+              />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <Titulo>FAQ</Titulo>
                 <Line />
-
                 <Parrafo>
                   Tienes alguna duda, te invitamos a revisar las preguntas más
                   frecuentes.
