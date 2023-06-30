@@ -37,6 +37,9 @@ const sliderPrincipal = [
   {
     image: "/7.jpg",
   },
+  {
+    image: "/8.jpg",
+  },
 ]
 
 const proceso = [
@@ -62,6 +65,22 @@ const proceso = [
   },
 ]
 
+const link = [
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/zdorovo.russia/"
+  },
+  {
+    name: "Youtube",
+    link: "https://www.youtube.com/@zdorovo.russia"
+  },
+  {
+    name: "Tik Tok",
+    link: "https://www.tiktok.com/@zdorovo.russia?is_from_webapp=1&sender_device=pc"
+  }
+  ]
+  
+
 const programas = [
   {
     index: 0,
@@ -75,14 +94,14 @@ const programas = [
     title: "Maestrías",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/ekaterimburgo.jpg",
+    imagen: "/maestria.jpg",
   },
   {
     index: 2,
     title: "Curso de ruso",
     description:
       "La Universidad Estatal de Kaerov es una universidad pública de investigación ubicada en Kaerov, Rusia. Fundada en 1724 por Pedro el Grande, es la universidad más antigua de Rusia y una de las más prestigiosas del mundo.",
-    imagen: "/ekaterimburgo.jpg",
+    imagen: "/ruso.jpg",
   },
 ]
 
@@ -145,6 +164,22 @@ export default function Home() {
     },
   }
 
+  const flechas = []
+
+  for (let i = 0; i < 3; i++) {
+    flechas.push(
+      <div key={i} className="h-10">
+        <Image
+          src="/arrow.png"
+          alt="arrow"
+          width={100}
+          height={100}
+          className="w-full h-full object-contain"
+        />
+      </div>
+    )
+  }
+
   const settings3 = {
     dots: true,
     infinite: true,
@@ -178,7 +213,7 @@ export default function Home() {
       <header className="sm:h-24 h-20 w-[85%] mx-auto">
         <div className="flex items-center justify-between h-full">
           <Image
-            src="/logoZ.png"
+            src="/logoO.png"
             alt="logo"
             width={800}
             height={800}
@@ -188,53 +223,38 @@ export default function Home() {
       </header>
       <main>
         <div className="w-[85%] mx-auto">
-          <div className="relative rounded-3xl overflow-hidden">
-            <Slider {...settings}>
-              {sliderPrincipal.map((item, index) => (
-                <div className="h-[35rem] relative" key={index}>
-                  <Image
-                    src={item.image}
-                    alt="DILE HOLA A RUSIA, sin importar si tienes un conocimiento mínimo del idioma y obtén tu visado en menos de 90 días"
-                    width={2000}
-                    height={1000}
-                    className="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
-                  />
-                  <div className="w-full h-full bg-gradient-to-r from-[#001959]/80 to-transparent z-50"></div>
-                </div>
-              ))}
-            </Slider>
-            <div className="absolute top-0 bottom-0 right-0 left-0">
-              <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
-                <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
-                  DILE HOLA A RUSIA
-                </h1>
-                <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
-                  Sin importar si tienes un conocimiento mínimo del idioma y
-                  obtén tu visado en menos de 90 días
-                </h1>
-                <p className="mt-3 leading-5 text-white">
-                  En ZDOROVO, nos apasiona brindar igualdad de oportunidades a
-                  estudiantes latinoamericanos que buscan una educación de
-                  calidad a nivel mundial. Con nuestra asesoría especializada y
-                  un equipo comprometido, te ofrecemos la puerta de entrada a
-                  las mejores universidades en Rusia.
-                </p>
-                <div className="mt-4 rounded-lg overflow-hidden bg-[#6083D4]/60 hover:bg-[#6083D4]/80 transition duration-500 ease-in-out w-56 md:w-72 py-2 shadow-lg">
-                  <div className="flex justify-center items-center">
-                    <Calendar fill="#fff" className="h-7 w-7" />
-                    <div className="ml-3 md:ml-4">
-                      <span className="text-white text-sm">
-                        Inicio de Inscripciones
-                      </span>
-                      <p className="mt-0 text-white">15 de Junio</p>
-                    </div>
+          <div className="rounded-3xl overflow-hidden">
+            <div className="relative">
+              <div className="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-r from-[#001959]/80 to-transparent z-30"></div>
+              <Slider {...settings}>
+                {sliderPrincipal.map((item, index) => (
+                  <div className="h-[35rem] relative" key={index}>
+                    <Image
+                      src={item.image}
+                      alt="DILE HOLA A RUSIA, sin importar si tienes un conocimiento mínimo del idioma y obtén tu visado en menos de 90 días"
+                      width={2000}
+                      height={1000}
+                      className="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 -z-10"
+                    />
                   </div>
+                ))}
+              </Slider>
+              <div className="absolute top-0 bottom-0 right-0 left-0 z-50">
+                <div className="flex flex-col justify-center h-full lg:w-[50%] md:w-[60%] w-[90%] ml-[7%]">
+                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                    DILE HOLA A RUSIA
+                  </h1>
+                  <h1 className="text-xl font-bold text-white lg:text-4xl sm:text-2xl md:text-3xl">
+                    Sin importar si tienes un conocimiento mínimo del idioma y
+                    obtén tu visado en menos de 90 días
+                  </h1>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="pt-16 flex justify-center">
+        <div className="pt-16 flex flex-col justify-center items-center">
+          <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
           <OpacityAnimation>
             <YouTube videoId="OlI_glpNGUY" opts={opts} />
           </OpacityAnimation>
@@ -243,22 +263,15 @@ export default function Home() {
           <div className="sm:w-[60%] mx-auto py-16 w-[85%]">
             <div className="text-center">
               <OpacityAnimation>
-                <Titulo>¿Estás inquieto acerca del idioma?</Titulo>
+                <Titulo>¿IDIOMA? Не волнуйся</Titulo>
                 <Line center />
                 <Parrafo>
-                  En el ámbito educativo de Rusia, se encuentran disponibles las
-                  facultades preparatorias diseñadas especialmente para
-                  estudiantes internacionales de distintos países. Estas
-                  facultades ofrecen cursos universitarios en grupos que abordan
-                  disciplinas relacionadas con las especialidades elegidas.
-                </Parrafo>
-                <div className="mt-3"></div>
-                <Parrafo>
-                  Durante el primer año, conocido como
-                  {` "`}preuniversitario{`"`}, tendrás la oportunidad de
-                  aprender el idioma ruso desde los fundamentos y también
-                  recibirás nivelación académica para prepararte de manera
-                  adecuada.
+                  ¿No entendiste verdad? Tranquilo yo estaba igual al
+                    principio y ya pase por ese proceso, es mas sencillo de lo
+                    que crees. Uno de los primeros pasos que realizaremos será
+                    en la inscripción de la facultad de idioma, por cierto, no
+                    te olvides, tenemos la comunidad ZDOROVO en rusia que hara
+                    mas agradable tu experiencia.
                 </Parrafo>
               </OpacityAnimation>
             </div>
@@ -270,11 +283,11 @@ export default function Home() {
             <div className="w-[85%] mx-auto py-16">
               <Titulo>Universidades y programas</Titulo>
               <Line />
-              <Slider {...settings3}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {programas.map((item, index) => (
                   <div
                     key={index}
-                    className="px-4 py-6 relative pointer-events-auto"
+                    className="relative pointer-events-auto"
                     onClick={() => handleProgramClick(index)}
                   >
                     <div className="overflow-hidden rounded-lg transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-lg">
@@ -299,7 +312,7 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </Slider>
+              </div>
               {selectedProgram && (
                 <Modal isOpen={!!selectedProgram} onClose={handleCloseModal}>
                   {selectedProgram.title}
@@ -313,19 +326,6 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center md:flex-row">
               <ImageWidth src="/idioma.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
-                <OpacityAnimation>
-                  <Titulo>¿IDIOMA? Не волнуйся</Titulo>
-                  <Line />
-
-                  <Parrafo>
-                    ¿No entendiste verdad? Tranquilo yo estaba igual al
-                    principio y ya pase por ese proceso, es mas sencillo de lo
-                    que crees. Uno de los primeros pasos que realizaremos será
-                    en la inscripción de la facultad de idioma, por cierto, no
-                    te olvides, tenemos la comunidad ZDOROVO en rusia que hara
-                    mas agradable tu experiencia.
-                  </Parrafo>
-                </OpacityAnimation>
                 <ul className="mt-8">
                   <OpacityAnimation>
                     {proceso.map((item, index) => (
@@ -384,7 +384,7 @@ export default function Home() {
         <div name="faq">
           <div className="w-[85%] mx-auto py-16">
             <div className="flex flex-col items-center justify-center md:flex-row">
-              <ImageWidth src="/Inscripción.jpg" alt="nose" />
+              <ImageWidth src="/idioma.jpg" alt="nose" />
               <div className="w-full md:w-1/2 md:ml-10 lg shadow-gray-300:mrl-20">
                 <Titulo>FAQ</Titulo>
                 <Line />
@@ -412,41 +412,39 @@ export default function Home() {
       </main>
 
       <footer className="bg-[#001959] text-white">
-        <div className="mx-auto w-[85%] p-4 pt-6 lg:pt-20 lg:pb-0">
+        <div className="mx-auto w-[85%] p-4 pt-6 md:pt-20 lg:pb-0">
           <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
             <Image
-              src="/logo.png"
+              src="/logoW.png"
               alt="logo"
-              width={500}
-              height={500}
-              className="w-28 md:w-32 lg:w-40 mb-4"
+              width={800}
+              height={800}
+              className="w-48 md:w-72 lg:w-80 mb-4"
             />
             <div></div>
             <div>
               <h2 className="mb-6 text-lg font-bold">Redes sociales</h2>
               <ul className="text-base ">
-                <li className="mb-2">
-                  <Link href="#" className="hover:underline">
-                    Twitter
+              {link.map((item, index) => (
+                <li className="mb-2" key={index}>
+                
+                  <Link href={item.link} className="hover:underline">
+                    {item.name}
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link href="#" className="hover:underline">
-                    Youtube
-                  </Link>
-                </li>
+                ))}
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-lg font-bold">Contacto</h2>
               <ul className="text-base ">
                 <li className="mb-2">+495 95220935</li>
-                <li className="mb-2">noreplay@gmail.com</li>
+                <li className="mb-2">informacionzdorovo@gmail.com</li>
               </ul>
             </div>
           </div>
           <div className="text-center py-5 md:py-10">
-            <span>© 2023 Privet™. All Rights Reserved.</span>
+            <span>© 2023 ZDOROVO. All Rights Reserved.</span>
           </div>
         </div>
       </footer>
