@@ -251,7 +251,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="pt-16 flex flex-col justify-center items-center w-[85%] md:w-[60%] mx-auto">
+        <div className="pt-16 flex flex-col justify-center items-center w-[85%] md:w-[60%] mx-auto overflow-hidden h-80">
           <div className="mb-8 grid grid-cols-3 gap-2">{flechas}</div>
           <OpacityAnimation>
             <YouTube videoId="OlI_glpNGUY" opts={opts} />
