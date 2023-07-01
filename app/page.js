@@ -70,12 +70,14 @@ const link = [
   {
     name: "Youtube",
     link: "https://www.youtube.com/@zdorovo.russia",
-    svg: <Youtube className="w-11 h-11" fill="#fff" />,
+    svg: <Youtube className="w-11 h-11 -ml-10 sm:ml-1" fill="#fff" />,
   },
   {
     name: "Tik Tok",
     link: "https://www.tiktok.com/@zdorovo.russia?is_from_webapp=1&sender_device=pc",
-    svg: <TikTok className="w-[3.5rem] h-[3.5rem] -mt-[0.45rem]" />,
+    svg: (
+      <TikTok className="w-[3.5rem] h-[3.5rem] -mt-[0.45rem] -ml-[5.2rem] sm:ml-0" />
+    ),
   },
 ]
 
@@ -403,7 +405,7 @@ export default function Home() {
 
       <footer className="bg-[#001959] text-white">
         <div className="mx-auto w-[95%] md:w-[85%] p-4 pt-6 md:pt-20 lg:pb-0">
-          <div className="grid w-full justify-items-end grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
+          <div className="grid w-full md:justify-items-end grid-cols-1 sm:grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
             <Image
               src="/logoW.png"
               alt="ZDOROVO"
@@ -415,7 +417,7 @@ export default function Home() {
               <h2 className="mb-4 text-base font-bold uppercase">
                 Redes sociales
               </h2>
-              <ul className="grid grid-cols-3 gap-5 sm:gap-2">
+              <ul className="grid grid-cols-3">
                 {link.map((item, index) => (
                   <li className="mb-2" key={index}>
                     <Link href={item.link}>{item.svg}</Link>
@@ -423,7 +425,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="col-span-2 break-words">
+            <div className="sm:col-span-2 break-words">
               <ul className="text-base">
                 <li className="mb-2">
                   <p>
