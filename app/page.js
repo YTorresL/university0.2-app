@@ -9,7 +9,7 @@ import Titulo from "@/components/Title/page"
 import ImageWidth from "@/components/ImageWidth/page"
 import Link from "next/link"
 import OpacityAnimation from "@/components/OpacityAnimation/page"
-import { Instagram, Youtube } from "@/components/Icons/page"
+import { Instagram, TikTok, Youtube } from "@/components/Icons/page"
 
 const sliderPrincipal = [
   {
@@ -75,6 +75,7 @@ const link = [
   {
     name: "Tik Tok",
     link: "https://www.tiktok.com/@zdorovo.russia?is_from_webapp=1&sender_device=pc",
+    svg: <TikTok className="w-[3.5rem] h-[3.5rem] -mt-[0.45rem]" />,
   },
 ]
 
@@ -403,28 +404,25 @@ export default function Home() {
       <footer className="bg-[#001959] text-white">
         <div className="mx-auto w-[95%] md:w-[85%] p-4 pt-6 md:pt-20 lg:pb-0">
           <div className="grid w-full justify-items-end grid-cols-2 gap-3 md:grid-cols-4 sm:gap-8">
-            <div>
-              <Image
-                src="/logoW.png"
-                alt="ZDOROVO"
-                width={800}
-                height={800}
-                className="w-48 md:w-72 lg:w-80 mb-6"
-              />
-              <div className="break-words">
-                <h2 className="mb-4 text-base font-bold uppercase">
-                  Redes sociales
-                </h2>
-                <ul className="grid grid-cols-3 gap-5 sm:gap-2">
-                  {link.map((item, index) => (
-                    <li className="mb-2" key={index}>
-                      <Link href={item.link}>{item.svg}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <Image
+              src="/logoW.png"
+              alt="ZDOROVO"
+              width={800}
+              height={800}
+              className="w-48 md:w-72 lg:w-80 mb-6"
+            />
+            <div className="break-words">
+              <h2 className="mb-4 text-base font-bold uppercase">
+                Redes sociales
+              </h2>
+              <ul className="grid grid-cols-3 gap-5 sm:gap-2">
+                {link.map((item, index) => (
+                  <li className="mb-2" key={index}>
+                    <Link href={item.link}>{item.svg}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div></div>
             <div className="col-span-2 break-words">
               <ul className="text-base">
                 <li className="mb-2">
