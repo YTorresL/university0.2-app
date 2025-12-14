@@ -91,6 +91,7 @@ export default function Home() {
         <Language />
         <Program />
         <Process />
+        
         <div className="bg-[url('/backto.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
           <div className="bg-[#001959]/70">
             <div className="w-[85%] mx-auto py-10">
